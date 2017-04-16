@@ -5,8 +5,206 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+		<header class="main-header">
+			<div class="logo">
+				<a href="#">
+					<img src="#" width="125" height="60" alt="logo">
+				</a>
+			</div>
+			<nav class="main-nav">
+				<ul>
+					<li>
+						<a href="#">Каталог</a>
+					</li>
+					<li>
+						<a href="#">Доставка и оплата</a>
+					</li>
+					<li>
+						<a href="#">О Компаниии</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="user-block">
+				<a class="search" href="#">Поиск</a>
+			</div>
+			<div class="user-block">
+				<a class="login" href="#">Вход</a>
+			</div>
+			<div class="user-block">
+				<a class="basket" href="#">Пусто</a>
+			</div>
+		</header>
+		<main class="site-main">
+			<div class="work">
+				<p class="time">С 10 до 20, ежедневно</p>
+				<p class="tel-number">8 812 450-25-25</p>
+			</div>
+			<div class="promo">
+				<img src="#" alt="promo-1">
+				<a href="#">Давайте оба!</a>
+			</div>
+			<article class="special-offers">
+				<div class="special-offer raspberry">
+					<span>
+						Малинка даром!
+					</span>
+					<p>
+						При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+					</p>
+					<a href="#">
+						Хочу варенье!
+					</a>
+				</div>
+				<div class="special-offer chocolate">
+					<span>
+						Шоколадки даром!
+					</span>
+					<p>
+						При покупке двух кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадой присыпки совершенно бесплатно.
+					</p>
+					<a href="#">
+						Хочу шоколадки!
+					</a>
+				</div>
+			</article>
+			<article class="popular-products">
+				<div class="popular">
+					<a href="#">
+						<img src="#" alt="creamy with citruse">
+					</a>
+					<!--Добавить данные о цене через псевдоселектор-->
+					<p>
+						Сливочное с апельсиновым джемом и цитрусовой стружкой
+					</p>
+				</div>
+				<div class="popular">
+					<a href="#">
+						<img src="#" alt="creamy-coffee with chocolate">
+					</a>
+					<p>
+						Сливочно-кофейное с кусочками шоколада
+					</p>
+				</div>
+				<div class="popular">
+					<a href="#">
+						<img src="#" alt="creamy-strawberry with white chocolate">
+					</a>
+					<p>
+						Сливочно-клубничное с присыпкой из белого шоколада
+					</p>
+				</div>
+				<div class="popular">
+					<a href="#">
+						<img src="#" alt="creme brulee">
+					</a>
+					<p>
+						Cливочное крем-брюле с карамельной подливкой
+					</p>
+				</div>
+			</article>
+			<article class="features">
+				<h2>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</h2>
+				<div class="features-point">
+					<img src="#" alt="icon: ice cream">
+					<p>
+						Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+					</p>
+				</div>
+				<div class="features-point">
+					<img src="#" alt="icon: nature">
+					<p>
+						Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+					</p>
+				</div>
+				<div class="features-point">
+					<img src="#" alt="icon: cow">
+					<p>
+						Для приготовления мороженного используются настоящие сливки высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
+					</p>
+				</div>
+				<div class="features-point">
+					<img src="#" alt="icon: temperature">
+					<p>
+						Доставка нашего мороженного до заказчиков осуществляется с специальном термопаке, который не дает мороженному растаять в пути и позволяет сохранить превосходный вкус.
+					</p>
+				</div> 
+			</article>
+			<article class="info">
+				<section class="blog">
+					<p>
+						Новое в нашем блоге
+					</p>
+					<a href="#">
+						10 способов сервировки фруктовых щербетов к столу
+					</a>
+				</section>
+				<section class="subscription">
+					<p>
+						Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас  происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+					</p>
+					<form action="#" method="post">
+						<input type="email" name="email" placeholder="Электронная почта" required>
+						<div class="email-button">
+							<input type="submit" value="Отправить">
+						</div>
+					</form>
+				</section>
+			</article>
+			<div class="map">
+				<img src="#" alt="карта">
+				<div class="contacts">
+					<p>
+						Адрес главного офиса и офлайн магазина:
+					</p>
+					<p class="adress">
+						ул. Большая Конюшенная 19/8, Санкт-Петербург
+					</p>
+					<p>
+						Для заказов по телефону: <span>8 812 450-12-12</span> (с 10 до 20 ежедневно)
+					</p>
+					<div class="feedback">
+						<a href="#">
+							Форма обратной связи
+						</a>
+					</div>
+				</div>
+			</div>			
+		</main>
+		<footer class="main-footer">
+			<div class="social-network">
+				<a href="#">
+					<img src="#" alt="twitter">
+				<a>
+				<a href="#">
+					<img src="#" alt="instagram">
+				<a>
+				<a href="#">
+					<img src="#" alt="facebook">
+				<a>
+				<a href="#">
+					<img src="#" alt="vk">
+				<a>				
+			</div>
+			<div class="helpful-info">
+				<a href="#">
+					Для поставщиков
+				</a>
+				<a href="#">
+					О производстве
+				</a>
+				<a href="#">
+					Наши документы
+				</a>
+				<a href="#">
+					Экологические стандарты
+				</a>
+			</div>
+			<div class="developer">
+				<img src="#" alt="html academy">
+				<p>
+					<Сделано в HTML academy 2016>
+				</p>
+			</div>
+		</footer>
   </body>
 </html>

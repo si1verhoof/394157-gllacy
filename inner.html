@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Глейси</title>
+  </head>
+  <body>
+		<header class="main-header">
+			<div class="logo">
+				<a href="#">
+					<img src="#" width="125" height="60" alt="logo">
+				</a>
+			</div>
+			<nav class="main-nav">
+				<ul>
+					<li>
+						<span class="main-nav-active">Каталог</span>
+					</li>
+					<li>
+						<a href="#">Доставка и оплата</a>
+					</li>
+					<li>
+						<a href="#">О Компаниии</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="user-block">
+				<a class="search" href="#">Поиск</a>
+			</div>
+			<div class="user-block">
+				<a class="login" href="#">Вход</a>
+			</div>
+			<div class="user-block">
+				<a class="basket" href="#">2 товара	</a>
+			</div>
+		</header>
+		<header class="page-header">
+			<div class="breadcrumbs">
+				<ul>
+					<li>
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Каталог
+						</a>
+					</li>
+					<li>
+						<span class="breadcrumb-active">
+							Сливочное
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="work">
+				<p class="time">С 10 до 20, ежедневно</p>
+				<p class="tel-number">8 812 450-25-25</p>
+			</div>
+			<h1>
+				<p>
+				 Сливочное мороженое
+				</p>
+			</h1>
+		</header>
+		<main class="site-main">
+			<div class="sort-value">
+				<form action="#" method="post" oninput="priceoutput.value=pricecount.value">
+					<p>
+						Сортировка
+					</p>
+					<select name="sort">
+						<option value="popularity">
+							По популярности
+						</option>
+						<!-- Для использования в будущем
+						<option value="">
+							
+						</option>
+						<option value="popularity">
+							
+						</option> -->	
+					</select>
+					<span class="count-value">Цена:</span>
+					<div class="output-value">
+						<output name="priceoutput">
+					</div>
+					<!-- Добавить второй бегунок -->
+					<div class="input-value">
+						<input type="range" id="pricecount" name="pricecount" min="0" max="800" step="100">
+					</div>
+					<p>
+						Жирность
+					</p>
+					<div class="icecream-fat-content">
+						<input type="radio" name="fat-content" id="fat-0" value="fat-0">
+						<label for="">
+							0%
+						</label>
+						<input type="radio" name="fat-content" id="fat-0-10" value="fat-0-10">
+						<label for="">
+							до 10%
+						</label>
+						<input type="radio" name="fat-content" id="fat-0-30" value="fat-0-30">
+						<label for="">
+							до 30%
+						</label>
+						<input type="radio" name="fat-content" id="fat-over-30" value="fat-over-30">
+						<label for="">
+							выше 30%
+						</label>
+					</div>
+					<p>
+						Наполнители
+					</p>
+					<div class="fillers-selection">
+						<input type="checkbox" name="filler-chocolate" id="chocolate" checked>
+						<label for="chocolate">Шоколадные</label>
+						<input type="checkbox" name="filler-sugar" id="sugar" checked>
+						<label for="sugar">Сахарные приспки</label>
+						<input type="checkbox" name="filler-fruits" id="fruits">
+						<label for="fruits">Фрукты</label>
+						<input type="checkbox" name="filler-syrups" id="syrups">
+						<label for="syrups">Сиропы</label>
+						<input type="checkbox" name="filler-jams" id="jams">
+						<label for="jams">Джемы</label>
+					</div>
+					<input type="submit" value="Применить">
+				</form>
+			</div>
+			<div class="production">
+				<img src="#" alt="creamy with citruse">
+				<!--Добавить данные о цене через псевдоселектор-->
+				<p>
+					Сливочное с апельсиновым джемом и цитрусовой стружкой
+				</p>
+				<img src="#" alt="creamy-coffee with chocolate">
+				<p>
+					Сливочно-кофейное с кусочками шоколада
+				</p>
+				<img src="#" alt="creamy-strawberry with white chocolate">
+				<p>
+					Сливочно-клубничное с присыпкой из белого шоколада
+				</p>
+				<img src="#" alt="creme brulee">
+				<p>
+					Cливочное крем-брюле с карамельной подливкой
+				</p>
+				<img src="#" alt="creamy with cranberry jam">
+				<p>
+					Сливочное с брусничным джемом
+				</p>
+				<img src="#" alt="creamy-blueberry with berry">
+				<p>
+					Сливочно-черничное с цельными ягодами черники
+				</p>
+				<img src="#" alt="cremy-limon with caramel">
+				<p>
+					Сливочно-лимонное с карамельной присыпкой
+				</p>
+				<img src="#" alt="creamy with chocolate">
+				<p>
+					Сливочное с карамельной присыпкой
+				</p>
+				<img src="#" alt="creamy-vanilla with chocolate">
+				<p>
+					Сливочно-ванильное с кусочками шоколада
+				</p>
+				<img src="#" alt="creamy with menthol syrup">
+				<p>
+					Сливочное с ментоловым сиропом
+				</p>
+				<img src="#" alt="creamy with dark chocolate">
+				<p>
+					Сливочное с кусочками тёмного шоколада
+				</p>
+				<img src="#" alt="creamy with mint syrup">
+				<p>
+					Сливочное с мятным сиропом
+				</p>
+			</div>
+			<ul class="page-switcher">
+				<li>
+					<span class="active-page">
+						1
+					</span>
+				</li>
+				<li>
+					<a href="#">
+						2
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						3
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						4
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						5
+					</a>
+				</li>
+			</ul>
+		</main>
+		<footer class="main-footer">
+			<div class="social-network">
+				<a href="#">
+					<img src="#" alt="twitter">
+				<a>
+				<a href="#">
+					<img src="#" alt="instagram">
+				<a>
+				<a href="#">
+					<img src="#" alt="facebook">
+				<a>
+				<a href="#">
+					<img src="#" alt="vk">
+				<a>				
+			</div>
+			<div class="helpful-info">
+				<a href="#">
+					Для поставщиков
+				</a>
+				<a href="#">
+					О производстве
+				</a>
+				<a href="#">
+					Наши документы
+				</a>
+				<a href="#">
+					Экологические стандарты
+				</a>
+			</div>
+			<div class="developer">
+				<img src="#" alt="html academy">
+				<p>
+					<Сделано в HTML academy 2016>
+				</p>
+			</div>
+		</footer>
+	</body>
+<html>
