@@ -7,9 +7,7 @@
   <body>
     <header class="main-header">
       <div class="logo">
-        <a href="#">
-          <img src="#" width="125" height="60" alt="logo">
-        </a>
+         <img src="#" width="125" height="60" alt="logo">
       </div>
       <nav class="main-nav">
         <ul>
@@ -17,6 +15,7 @@
             <a href="#">Каталог</a>
             <ul class="catalog-nav">
               <li>
+                <!--Задать адрес каталогу после публикации-->
                 <a href="#">
                   Новинки
                 </a>
@@ -88,30 +87,30 @@
       </div>
       <div class="special-offers">
         <div class="special-offer raspberry">
-          <span class="free-rapsberry">
+          <span class="special-offer-head">
             Малинка даром!
           </span>
           <p>
             При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
-          <a href="#">
+          <a href="#" class="special-offer-button">
             Хочу варенье!
           </a>
         </div>
         <div class="special-offer chocolate">
-          <span class="free-chocolate">
+          <span class="special-offer-head">
             Шоколадки даром!
           </span>
           <p>
             При покупке двух кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадой присыпки совершенно бесплатно.
           </p>
-          <a href="#">
+          <a href="#" class="special-offer-button">
             Хочу шоколадки!
           </a>
         </div>
       </div>
       <section class="popular-products">
-        <div class="popular">
+        <div class="icecream-card">
           <a href="#">
             <img src="#" alt="creamy with citruse">
           </a>
@@ -121,8 +120,11 @@
           <p>
             Сливочное с апельсиновым джемом и цитрусовой стружкой
           </p>
+          <a href="#" class="hidden-button">
+            Быстрый просмотр
+          </a>
         </div>
-        <div class="popular">
+        <div class="icecream-card">
           <a href="#">
             <img src="#" alt="creamy-coffee with chocolate">
           </a>
@@ -132,8 +134,11 @@
           <p>
             Сливочно-кофейное с кусочками шоколада
           </p>
+          <a href="#" class="hidden-button">
+            Быстрый просмотр
+          </a>
         </div>
-        <div class="popular">
+        <div class="icecream-card">
           <a href="#">
             <img src="#" alt="creamy-strawberry with white chocolate">
           </a>
@@ -143,8 +148,11 @@
           <p>
             Сливочно-клубничное с присыпкой из белого шоколада
           </p>
+          <a href="#" class="hidden-button">
+            Быстрый просмотр
+          </a>
         </div>
-        <div class="popular">
+        <div class="icecream-card">
           <a href="#">
             <img src="#" alt="creme brulee">
           </a>
@@ -154,29 +162,33 @@
           <p>
             Cливочное крем-брюле с карамельной подливкой
           </p>
+          <a href="#" class="hidden-button">
+            Быстрый просмотр
+          </a>
         </div>
       </section>
       <div class="features">
         <h2>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</h2>
-        <div class="features-point">
+        <div class="features-point features-icon icon-icecream">
+          <!--Добавил имена классам: общий, для форматирования внещнего вида гурппы, индивидуальный для указания координат в спрайте-->
           <!-- осуществить в псевдеэлементе:img src="#" alt="icon: ice cream"-->
           <p>
             Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
           </p>
         </div>
-        <div class="features-point">
+        <div class="features-point features-icon icon-nature">
           <!-- осуществить в псевдеэлементе:img src="#" alt="icon: nature"-->
           <p>
             Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
           </p>
         </div>
-        <div class="features-point">
+        <div class="features-point features-icon icon-cow">
           <!-- осуществить в псевдеэлементе:img src="#" alt="icon: cow"-->
           <p>
             Для приготовления мороженного используются настоящие сливки высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
           </p>
         </div>
-        <div class="features-point">
+        <div class="features-point features-icon icon-temperature">
           <!-- осуществить в псевдеэлементе:img src="#" alt="icon: temperature"-->
           <p>
             Доставка нашего мороженного до заказчиков осуществляется с специальном термопаке, который не дает мороженному растаять в пути и позволяет сохранить превосходный вкус.
@@ -233,16 +245,16 @@
     </main>
     <footer class="main-footer">
       <div class="social-network">
-        <a href="#" class="twitter">
+        <a href="#" class="social-icon twitter">
           twitter
         </a>
-        <a href="#" class="instagram">
+        <a href="#" class="social-icon instagram">
           instagram
         </a>
-        <a href="#" class="facebook">
+        <a href="#" class="social-icon facebook">
           facebook
         </a>
-        <a href="#" class="vk">
+        <a href="#" class="social-icon vk">
           vk
         </a>        
       </div>
