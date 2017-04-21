@@ -6,10 +6,9 @@
   </head>
   <body>
     <header class="main-header">
-      <!--Задать адрес главной страницы после публикации-->
       <div class="logo">
-        <a href="#">
-          <img src="#" width="125" height="60" alt="logo">
+        <a href="index.html">
+          <img src="img/icon/icon-logo.png" width="154" height="64" alt="logo">
         </a>
       </div>
       <nav class="main-nav">
@@ -22,7 +21,7 @@
                   Новинки
                 </a>
               </li>
-              <hr>
+              <!-- <hr> В макете линия, сделать через css::after, т.к. тег hr не дочерний к списку-->
               <li>
                 <a href="#">
                   Сливочное
@@ -91,7 +90,7 @@
           </div>
           <div class="basket-row">
             <span class="">
-              Клубничный пломбирс присыпкой из белого шоколада
+              Клубничный пломбир с присыпкой из белого шоколада
             </span>
             <span class="">
               1,5 кг x 300 <span class="">руб.</span>
@@ -100,7 +99,7 @@
               450 руб.
             </span>
           </div>
-          <tr>
+          <!-- tr - Вынести тег в css -->
           <span class="basket-total-price">
             Итого: 750 руб.
           </span>
@@ -114,8 +113,7 @@
       <div class="breadcrumbs">
         <ul>
           <li>
-            <!--Задать адрес главной страницы после публикации-->
-            <a href="#">
+            <a href="index.html">
               Главная
             </a>
           </li>
@@ -135,10 +133,8 @@
         <p class="time">С 10 до 20, ежедневно</p>
         <p class="tel-number">8 812 450-25-25</p>
       </div>
-      <h1>
-        <p>
-         Сливочное мороженое
-        </p>
+      <h1 class="catalog-title">
+        Сливочное мороженое
       </h1>
     </header>
     <main class="site-main">
@@ -165,7 +161,7 @@
             Цена:
           </span>
           <div class="output-value">
-            <output name="priceoutput">
+            <output name="priceoutput"></output>
           </div>
           <!-- Добавить второй бегунок -->
           <div class="input-value">
@@ -174,45 +170,63 @@
           <span class="sort-text">
             Жирность
           </span>
-          <div class="icecream-fat-content">
-            <input type="radio" name="fat-content" id="fat-0" value="fat-0">
-            <label for="">
-              0%
-            </label>
-            <input type="radio" name="fat-content" id="fat-0-10" value="fat-0-10">
-            <label for="">
-              до 10%
-            </label>
-            <input type="radio" name="fat-content" id="fat-0-30" value="fat-0-30">
-            <label for="">
-              до 30%
-            </label>
-            <input type="radio" name="fat-content" id="fat-over-30" value="fat-over-30">
-            <label for="">
-              выше 30%
-            </label>
-          </div>
+          <ul class="radio-selection">
+            <li>
+              <input type="radio" name="fat-content" id="fat-0" value="fat-0">
+              <label for="fat-0">
+                0%
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="fat-content" id="fat-0-10" value="fat-0-10">
+              <label for="fat-0-10">
+                до 10%
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="fat-content" id="fat-0-30" value="fat-0-30">
+              <label for="fat-0-30">
+                до 30%
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="fat-content" id="fat-over-30" value="fat-over-30">
+              <label for="fat-over-30">
+                выше 30%
+              </label>
+            </li>
+          </ul>
           <span class="sort-text">
             Наполнители
           </span>
-          <div class="fillers-selection">
-            <input type="checkbox" name="filler-chocolate" id="chocolate" checked>
-            <label for="chocolate">Шоколадные</label>
-            <input type="checkbox" name="filler-sugar" id="sugar" checked>
-            <label for="sugar">Сахарные приспки</label>
-            <input type="checkbox" name="filler-fruits" id="fruits">
-            <label for="fruits">Фрукты</label>
-            <input type="checkbox" name="filler-syrups" id="syrups">
-            <label for="syrups">Сиропы</label>
-            <input type="checkbox" name="filler-jams" id="jams">
-            <label for="jams">Джемы</label>
-          </div>
+          <ul class="checkbox-selection">
+            <li>
+              <input type="checkbox" name="filler-chocolate" id="chocolate" checked>
+              <label for="chocolate">Шоколадные</label>
+            </li>
+            <li>
+              <input type="checkbox" name="filler-sugar" id="sugar" checked>
+              <label for="sugar">Сахарные приспки</label>
+            </li>
+            <li>
+              <input type="checkbox" name="filler-fruits" id="fruits">
+              <label for="fruits">Фрукты</label>
+            </li>
+            <li>
+              <input type="checkbox" name="filler-syrups" id="syrups">
+              <label for="syrups">Сиропы</label>
+            </li>
+            <li>
+              <input type="checkbox" name="filler-jams" id="jams">
+              <label for="jams">Джемы</label>
+            </li>
+          </ul>
           <input type="submit" value="Применить">
         </form>
       </div>
       <div class="production">
         <div class="icecream-card">
-          <img src="#" alt="creamy with citruse">
+          <img src="img/item-cards/card1-citruse.png" alt="creamy with citruse" width="267px" height="267px">
           <span class="price">
             310 р/кг
           </span>
@@ -224,7 +238,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="creamy-coffee with chocolate">
+          <img src="img/item-cards/card2-coffee.png" alt="creamy-coffee with chocolate" width="267px" height="267px">
           <span class="price">
             380 р/кг
           </span>
@@ -236,7 +250,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="creamy-strawberry with white chocolate">
+          <img src="img/item-cards/card3-strawberry.png" alt="creamy-strawberry with white chocolate" width="267px" height="267px">
           <span class="price">
             355 р/кг
           </span>
@@ -248,7 +262,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="creme brulee">
+          <img src="img/item-cards/card4-cremebrulee.png" alt="creme brulee" width="267px" height="267px">
           <span class="price">
             415 р/кг
           </span>
@@ -260,7 +274,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="creamy with cranberry jam">
+          <img src="img/item-cards/card5-cranberry.png" alt="creamy with cranberry jam" width="267px" height="267px">
           <span class="price">
             325 р/кг
           </span>
@@ -272,7 +286,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="creamy-blueberry with berry">
+          <img src="img/item-cards/card6-blueberry.png" alt="creamy-blueberry with berry" width="267px" height="267px">
           <span class="price">
             410 р/кг
           </span>
@@ -284,7 +298,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="cremy-limon with caramel">
+          <img src="img/item-cards/card7-limon.png" alt="cremy-limon with caramel" width="267px" height="267px">
           <span class="price">
             375 р/кг
           </span>
@@ -296,7 +310,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="creamy with chocolate">
+          <img src="img/item-cards/card8-creamychocolate.png" alt="creamy with chocolate" width="267px" height="267px">
           <span class="price">
             320 р/кг
           </span>
@@ -308,7 +322,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="creamy-vanilla with chocolate">
+          <img src="img/item-cards/card9-creamyvanilla.png" alt="creamy-vanilla with chocolate" width="267px" height="267px">
           <span class="price">
             440 р/кг
           </span>
@@ -320,7 +334,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="creamy with menthol syrup">
+          <img src="img/item-cards/card10-menthol.png" alt="creamy with menthol syrup" width="267px" height="267px">
           <span class="price">
             435 р/кг
           </span>
@@ -332,7 +346,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="creamy with dark chocolate">
+          <img src="img/item-cards/card11-darkchocolate.png" alt="creamy with dark chocolate" width="267px" height="267px">
           <span class="price">
             355 р/кг
           </span>
@@ -344,7 +358,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="#" alt="creamy with mint syrup">
+          <img src="img/item-cards/card12-mint.png" alt="creamy with mint syrup" width="267px" height="267px">
           <span class="price">
             420 р/кг
           </span>
@@ -385,20 +399,28 @@
       </ul>
     </main>
     <footer class="main-footer">
-      <div class="social-network">
-        <a href="#" class="social-icon twitter">
-          twitter
-        </a>
-        <a href="#" class="social-icon instagram">
-          instagram
-        </a>
-        <a href="#" class="social-icon facebook">
-          facebook
-        </a>
-        <a href="#" class="social-icon vk">
-          vk
-        </a>        
-      </div>
+      <ul class="social-network">
+        <li>
+          <a href="#" class="social-icon twitter">
+            twitter
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social-icon instagram">
+            instagram
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social-icon facebook">
+            facebook
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social-icon vk">
+            vk
+          </a>
+        </li>
+      </ul>
       <div class="helpful-info">
         <!--Картина на псевдоселекторе-->
         <a href="#" class="bold">
@@ -414,12 +436,12 @@
           Экологические стандарты
         </a>
       </div>
-      <div class="developer">
-        <img src="#" alt="html academy">
+      <div class="made-in">
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <Сделано в HTML academy 2016>
+          <img src="img/icon/icon-madein.png" alt="html academy">
         </a>
+        <span class="made-in-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML academy</a> 2016</span>
       </div>
     </footer>
   </body>
-<html>
+</html>
