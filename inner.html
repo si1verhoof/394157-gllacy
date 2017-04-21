@@ -77,28 +77,30 @@
       <div class="basket">
         <a href="#">2 товара</a>
         <div class="basket-content">
-          <div class="basket-row">
-            <span class="">
-              Пломбир с апельсиновым джемом
-            </span>
-            <span class="">
-              1,5 кг x 200 <span class="">руб.</span>
-            </span>
-            <span class="">
-              300 руб.
-            </span>
-          </div>
-          <div class="basket-row">
-            <span class="">
-              Клубничный пломбир с присыпкой из белого шоколада
-            </span>
-            <span class="">
-              1,5 кг x 300 <span class="">руб.</span>
-            </span>
-            <span class="">
-              450 руб.
-            </span>
-          </div>
+          <table class="basket-purchase">
+            <tr class="basket-row row-1">
+              <td>
+                Пломбир с апельсиновым джемом
+              </td>
+              <td>
+                1,5 кг x 200 <span class="basket-currency">руб.</span>
+              </td>
+              <td>
+                300 руб.
+              </td>
+            </tr>
+            <tr class="basket-row row-2">
+              <td>
+                Клубничный пломбир с присыпкой из белого шоколада
+              </td>
+              <td>
+                1,5 кг x 300 <span class="basket-currency">руб.</span>
+              </td>
+              <td>
+                450 руб.
+              </td>
+            </tr>
+          </table>
           <!-- tr - Вынести тег в css -->
           <span class="basket-total-price">
             Итого: 750 руб.
@@ -226,7 +228,7 @@
       </div>
       <div class="production">
         <div class="icecream-card">
-          <img src="img/item-cards/card1-citruse.png" alt="creamy with citruse" width="267px" height="267px">
+          <img src="img/item-cards/card-citruse.png" alt="creamy with citruse" width="267px" height="267px">
           <span class="price">
             310 р/кг
           </span>
@@ -238,7 +240,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card2-coffee.png" alt="creamy-coffee with chocolate" width="267px" height="267px">
+          <img src="img/item-cards/card-coffee.png" alt="creamy-coffee with chocolate" width="267px" height="267px">
           <span class="price">
             380 р/кг
           </span>
@@ -250,7 +252,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card3-strawberry.png" alt="creamy-strawberry with white chocolate" width="267px" height="267px">
+          <img src="img/item-cards/card-strawberry.png" alt="creamy-strawberry with white chocolate" width="267px" height="267px">
           <span class="price">
             355 р/кг
           </span>
@@ -262,7 +264,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card4-cremebrulee.png" alt="creme brulee" width="267px" height="267px">
+          <img src="img/item-cards/card-cremebrulee.png" alt="creme brulee" width="267px" height="267px">
           <span class="price">
             415 р/кг
           </span>
@@ -274,7 +276,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card5-cranberry.png" alt="creamy with cranberry jam" width="267px" height="267px">
+          <img src="img/item-cards/card-cranberry.png" alt="creamy with cranberry jam" width="267px" height="267px">
           <span class="price">
             325 р/кг
           </span>
@@ -286,7 +288,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card6-blueberry.png" alt="creamy-blueberry with berry" width="267px" height="267px">
+          <img src="img/item-cards/card-blueberry.png" alt="creamy-blueberry with berry" width="267px" height="267px">
           <span class="price">
             410 р/кг
           </span>
@@ -298,7 +300,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card7-limon.png" alt="cremy-limon with caramel" width="267px" height="267px">
+          <img src="img/item-cards/card-limon.png" alt="cremy-limon with caramel" width="267px" height="267px">
           <span class="price">
             375 р/кг
           </span>
@@ -310,7 +312,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card8-creamychocolate.png" alt="creamy with chocolate" width="267px" height="267px">
+          <img src="img/item-cards/card-creamychocolate.png" alt="creamy with chocolate" width="267px" height="267px">
           <span class="price">
             320 р/кг
           </span>
@@ -322,7 +324,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card9-creamyvanilla.png" alt="creamy-vanilla with chocolate" width="267px" height="267px">
+          <img src="img/item-cards/card-creamyvanilla.png" alt="creamy-vanilla with chocolate" width="267px" height="267px">
           <span class="price">
             440 р/кг
           </span>
@@ -334,7 +336,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card10-menthol.png" alt="creamy with menthol syrup" width="267px" height="267px">
+          <img src="img/item-cards/card-menthol.png" alt="creamy with menthol syrup" width="267px" height="267px">
           <span class="price">
             435 р/кг
           </span>
@@ -346,7 +348,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card11-darkchocolate.png" alt="creamy with dark chocolate" width="267px" height="267px">
+          <img src="img/item-cards/card-darkchocolate.png" alt="creamy with dark chocolate" width="267px" height="267px">
           <span class="price">
             355 р/кг
           </span>
@@ -358,7 +360,7 @@
           </a>
         </div>
         <div class="icecream-card">
-          <img src="img/item-cards/card12-mint.png" alt="creamy with mint syrup" width="267px" height="267px">
+          <img src="img/item-cards/card-mint.png" alt="creamy with mint syrup" width="267px" height="267px">
           <span class="price">
             420 р/кг
           </span>
