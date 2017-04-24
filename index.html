@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Glassy: main page</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <div class="logo">
-         <img src="img/icon/icon-logo.png" width="154" height="64" alt="logo">
-      </div>
-      <nav class="main-nav">
+      <nav class="main-nav clearfix">
+        <div class="logo">
+           <img src="img/icon/icon-logo.png" width="154" height="64" alt="logo">
+        </div>
         <ul>
           <li>
             <a href="#">Каталог</a>
@@ -76,18 +77,20 @@
       </div>
     </header>
     <main class="site-main">
-      <div class="work">
-        <p class="time">С 10 до 20, ежедневно</p>
-        <p class="tel-number">8 812 450-25-25</p>
-      </div>
       <div class="promo">
+        <div class="work-time">
+          <p class="time">С 10 до 20, ежедневно</p>
+          <p class="tel-number">8 812 450-25-25</p>
+        </div>
         <img src="#" alt="promo-1">
-        <span class="promo-background1-text">
-          Крем-брюле и пломбир с малиновым джемом
-        </span>
-        <a href="#">Давайте оба!</a>
+        <div class="promo-text">
+          <span class="promo-background1-text">
+            Крем-брюле и пломбир с малиновым джемом
+          </span>
+          <a href="#">Давайте оба!</a>
+        </div>
       </div>
-      <div class="special-offers">
+      <div class="special-offers clearfix">
         <div class="special-offer raspberry">
           <span class="special-offer-head">
             Малинка даром!
@@ -169,7 +172,7 @@
           </a>
         </div>
       </section>
-      <div class="features">
+      <div class="features clearfix">
         <span class="features-intro">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</span>
         <div class="features-icon icon-icecream">
           <!--Добавил имена классам: общий, для форматирования внещнего вида гурппы, индивидуальный для указания координат в спрайте-->
@@ -197,8 +200,8 @@
           </p>
         </div> 
       </div>
-      <div class="info">
-        <div class="blog">
+      <div class="info clearfix">
+        <div class="info-data blog">
           <p>
             Новое в нашем блоге
           </p>
@@ -206,7 +209,7 @@
             10 способов сервировки фруктовых щербетов к столу
           </a>
         </div>
-        <div class="subscription">
+        <div class="info-data subscription">
           <p>
             Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас  происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
           </p>
@@ -231,7 +234,9 @@
           <a href="#" class="feedback">
             Форма обратной связи
           </a>
-          <div class="feedback-form">
+         </div>
+      </div> 
+      <div class="feedback-form">
             <p>
               Мы обязательно вам ответим!
             </p>
@@ -241,8 +246,6 @@
               <input type="text" name="recourse" placeholder="Напишите что-нибудь...">
               <input type="submit" value="Отправить">
             </form>
-          </div>
-        </div>
       </div>      
     </main>
     <footer class="main-footer">
