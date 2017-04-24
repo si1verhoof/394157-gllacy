@@ -6,12 +6,12 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <nav class="main-nav clearfix">
+    <header class="main-header clearfix">
+      <nav class="main-nav">
         <div class="logo">
            <img src="img/icon/icon-logo.png" width="154" height="64" alt="logo">
         </div>
-        <ul>
+        <ul class="site-nav">
           <li>
             <a href="#">Каталог</a>
             <ul class="catalog-nav">
@@ -50,30 +50,32 @@
           </li>
         </ul>
       </nav>
-      <div class="search">
-        <a href="#">Поиск</a>
-        <div class="search-input">
-          <input type="text" placeholder="Что ищем?">
+      <div class="header-buttons">
+        <div class="search">
+          <a href="#">Поиск</a>
+          <div class="search-input">
+            <input type="text" placeholder="Что ищем?">
+          </div>
         </div>
-      </div>
-      <div class="user-block">
-        <a href="#">Вход</a>
-        <div class="user-reg">
-          <form action="#" method="post">
-            <input type="email" name="email-reg" id="email-reg" placeholder="Электронная почта" required>
-            <input type="password" name="password-login" id="password-login" placeholder="Пароль" required>
-            <input type="submit" value="Войти">
-            <a href="#">
-              Забыли пароль?
-            </a>
-            <a href="#">
-              Новая регистрация
-            </a>
-          </form>
+        <div class="user-block">
+          <a href="#">Вход</a>
+          <div class="user-reg">
+            <form action="#" method="post">
+              <input type="email" name="email-reg" id="email-reg" placeholder="Электронная почта" required>
+              <input type="password" name="password-login" id="password-login" placeholder="Пароль" required>
+              <input type="submit" value="Войти">
+              <a href="#">
+                Забыли пароль?
+              </a>
+              <a href="#">
+                Новая регистрация
+              </a>
+            </form>
+          </div>
         </div>
-      </div>
-      <div class="basket">
-        <a href="#">Пусто</a>
+        <div class="basket">
+          <a href="#">Пусто</a>
+        </div>
       </div>
     </header>
     <main class="site-main">
@@ -248,7 +250,7 @@
             </form>
       </div>      
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer clearfix">
       <div class="social-network">
         <a href="#" class="social-icon twitter">
           twitter
