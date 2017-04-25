@@ -13,7 +13,7 @@
         </div>
         <ul class="site-nav">
           <li>
-            <a href="#">Каталог</a>
+            <a href="inner.html">Каталог</a>  <!--Ссылка размещена временно-->
             <ul class="catalog-nav">
               <li>
                 <a href="inner.html">
@@ -79,146 +79,148 @@
       </div>
     </header>
     <main class="site-main">
-      <div class="promo">
-        <div class="work-time">
-          <p class="time">С 10 до 20, ежедневно</p>
-          <p class="tel-number">8 812 450-25-25</p>
+      <div class="container">
+        <div class="promo">
+          <div class="work-time">
+            <p class="time">С 10 до 20, ежедневно</p>
+            <p class="tel-number">8 812 450-25-25</p>
+          </div>
+          <img src="#" alt="promo-1">
+          <div class="promo-text">
+            <span class="promo-background1-text">
+              Крем-брюле и пломбир с малиновым джемом
+            </span>
+            <a href="#">Давайте оба!</a>
+          </div>
         </div>
-        <img src="#" alt="promo-1">
-        <div class="promo-text">
-          <span class="promo-background1-text">
-            Крем-брюле и пломбир с малиновым джемом
-          </span>
-          <a href="#">Давайте оба!</a>
+        <div class="special-offers clearfix">
+          <div class="special-offer raspberry">
+            <span class="special-offer-head">
+              Малинка даром!
+            </span>
+            <p>
+              При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+            </p>
+            <a href="#" class="special-offer-button">
+              Хочу варенье!
+            </a>
+          </div>
+          <div class="special-offer chocolate">
+            <span class="special-offer-head">
+              Шоколадки даром!
+            </span>
+            <p>
+              При покупке двух кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадой присыпки совершенно бесплатно.
+            </p>
+            <a href="#" class="special-offer-button">
+              Хочу шоколадки!
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="special-offers clearfix">
-        <div class="special-offer raspberry">
-          <span class="special-offer-head">
-            Малинка даром!
-          </span>
-          <p>
-            При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
-          </p>
-          <a href="#" class="special-offer-button">
-            Хочу варенье!
-          </a>
+        <section class="popular-products">
+          <div class="icecream-card">
+            <a href="#">
+              <img src="img/item-cards/card-citruse.png" alt="creamy with citruse" width="267" height="267">
+            </a>
+            <span class="price">
+              310 р/кг
+            </span>
+            <p>
+              Сливочное с апельсиновым джемом и цитрусовой стружкой
+            </p>
+            <a href="#" class="hidden-button">
+              Быстрый просмотр
+            </a>
+          </div>
+          <div class="icecream-card">
+            <a href="#">
+              <img src="img/item-cards/card-coffee.png" alt="creamy-coffee with chocolate" width="267" height="267">
+            </a>
+            <span class="price">
+              380 р/кг
+            </span>
+            <p>
+              Сливочно-кофейное с кусочками шоколада
+            </p>
+            <a href="#" class="hidden-button">
+              Быстрый просмотр
+            </a>
+          </div>
+          <div class="icecream-card">
+            <a href="#">
+              <img src="img/item-cards/card-strawberry.png" alt="creamy-strawberry with white chocolate" width="267" height="267">
+            </a>
+            <span class="price">
+              355 р/кг
+            </span>
+            <p>
+              Сливочно-клубничное с присыпкой из белого шоколада
+            </p>
+            <a href="#" class="hidden-button">
+              Быстрый просмотр
+            </a>
+          </div>
+          <div class="icecream-card">
+            <a href="#">
+              <img src="img/item-cards/card-cremebrulee.png" alt="creme brulee" width="267" height="267">
+            </a>
+            <span class="price">
+              415 р/кг
+            </span>
+            <p>
+              Cливочное крем-брюле с карамельной подливкой
+            </p>
+            <a href="#" class="hidden-button">
+              Быстрый просмотр
+            </a>
+          </div>
+        </section>
+        <div class="features clearfix">
+          <span class="features-intro">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</span>
+          <div class="features-icon icon-icecream">
+            <!--Добавил имена классам: общий, для форматирования внещнего вида гурппы, индивидуальный для указания координат в спрайте-->
+            <!-- осуществить в псевдеэлементе:img src="#" alt="icon: ice cream"-->
+            <p>
+              Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+            </p>
+          </div>
+          <div class="features-icon icon-nature">
+            <!-- осуществить в псевдеэлементе:img src="#" alt="icon: nature"-->
+            <p>
+              Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+            </p>
+          </div>
+          <div class="features-icon icon-cow">
+            <!-- осуществить в псевдеэлементе:img src="#" alt="icon: cow"-->
+            <p>
+              Для приготовления мороженного используются настоящие сливки высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
+            </p>
+          </div>
+          <div class="features-point features-icon icon-temperature">
+            <!-- осуществить в псевдеэлементе:img src="#" alt="icon: temperature"-->
+            <p>
+              Доставка нашего мороженного до заказчиков осуществляется с специальном термопаке, который не дает мороженному растаять в пути и позволяет сохранить превосходный вкус.
+            </p>
+          </div> 
         </div>
-        <div class="special-offer chocolate">
-          <span class="special-offer-head">
-            Шоколадки даром!
-          </span>
-          <p>
-            При покупке двух кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадой присыпки совершенно бесплатно.
-          </p>
-          <a href="#" class="special-offer-button">
-            Хочу шоколадки!
-          </a>
-        </div>
-      </div>
-      <section class="popular-products">
-        <div class="icecream-card">
-          <a href="#">
-            <img src="img/item-cards/card-citruse.png" alt="creamy with citruse" width="267" height="267">
-          </a>
-          <span class="price">
-            310 р/кг
-          </span>
-          <p>
-            Сливочное с апельсиновым джемом и цитрусовой стружкой
-          </p>
-          <a href="#" class="hidden-button">
-            Быстрый просмотр
-          </a>
-        </div>
-        <div class="icecream-card">
-          <a href="#">
-            <img src="img/item-cards/card-coffee.png" alt="creamy-coffee with chocolate" width="267" height="267">
-          </a>
-          <span class="price">
-            380 р/кг
-          </span>
-          <p>
-            Сливочно-кофейное с кусочками шоколада
-          </p>
-          <a href="#" class="hidden-button">
-            Быстрый просмотр
-          </a>
-        </div>
-        <div class="icecream-card">
-          <a href="#">
-            <img src="img/item-cards/card-strawberry.png" alt="creamy-strawberry with white chocolate" width="267" height="267">
-          </a>
-          <span class="price">
-            355 р/кг
-          </span>
-          <p>
-            Сливочно-клубничное с присыпкой из белого шоколада
-          </p>
-          <a href="#" class="hidden-button">
-            Быстрый просмотр
-          </a>
-        </div>
-        <div class="icecream-card">
-          <a href="#">
-            <img src="img/item-cards/card-cremebrulee.png" alt="creme brulee" width="267" height="267">
-          </a>
-          <span class="price">
-            415 р/кг
-          </span>
-          <p>
-            Cливочное крем-брюле с карамельной подливкой
-          </p>
-          <a href="#" class="hidden-button">
-            Быстрый просмотр
-          </a>
-        </div>
-      </section>
-      <div class="features clearfix">
-        <span class="features-intro">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</span>
-        <div class="features-icon icon-icecream">
-          <!--Добавил имена классам: общий, для форматирования внещнего вида гурппы, индивидуальный для указания координат в спрайте-->
-          <!-- осуществить в псевдеэлементе:img src="#" alt="icon: ice cream"-->
-          <p>
-            Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-          </p>
-        </div>
-        <div class="features-icon icon-nature">
-          <!-- осуществить в псевдеэлементе:img src="#" alt="icon: nature"-->
-          <p>
-            Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-          </p>
-        </div>
-        <div class="features-icon icon-cow">
-          <!-- осуществить в псевдеэлементе:img src="#" alt="icon: cow"-->
-          <p>
-            Для приготовления мороженного используются настоящие сливки высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
-          </p>
-        </div>
-        <div class="features-point features-icon icon-temperature">
-          <!-- осуществить в псевдеэлементе:img src="#" alt="icon: temperature"-->
-          <p>
-            Доставка нашего мороженного до заказчиков осуществляется с специальном термопаке, который не дает мороженному растаять в пути и позволяет сохранить превосходный вкус.
-          </p>
-        </div> 
-      </div>
-      <div class="info clearfix">
-        <div class="info-data blog">
-          <p>
-            Новое в нашем блоге
-          </p>
-          <a href="#">
-            10 способов сервировки фруктовых щербетов к столу
-          </a>
-        </div>
-        <div class="info-data subscription">
-          <p>
-            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас  происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-          </p>
-          <form action="#" method="post">
-            <input type="email" name="email" placeholder="Электронная почта" required>
-            <input type="submit" value="Отправить">
-          </form>
+        <div class="info clearfix">
+          <div class="info-data blog">
+            <p>
+              Новое в нашем блоге
+            </p>
+            <a href="#">
+              10 способов сервировки фруктовых щербетов к столу
+            </a>
+          </div>
+          <div class="info-data subscription">
+            <p>
+              Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас  происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+            </p>
+            <form action="#" method="post">
+              <input type="email" name="email" placeholder="Электронная почта" required>
+              <input type="submit" value="Отправить">
+            </form>
+          </div>
         </div>
       </div>
       <div class="map">
