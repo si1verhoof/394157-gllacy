@@ -30,6 +30,10 @@ h2 {
   padding: 0px;
 }
 
+body {
+  background-color: teal;
+}
+
 .main-header {
   width: 1200px;
   margin: 0 auto;
@@ -156,7 +160,7 @@ h2 {
 
 .features {
   min-height: 305px;
-  width: 1106px;
+  width: 1146px;
   margin: 0 27px;
   padding: 27px 20px;
   box-sizing: border-box;
@@ -341,10 +345,14 @@ h2 {
   
 */
 
-.site-nav {
+.sub-nav {
   display: none;
 }
 
 .basket-content {
   display: none;
+}
+
+.made-in-logo {
+  text-decoration: none;
 }

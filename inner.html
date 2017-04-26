@@ -6,17 +6,17 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header clearfix">
       <div class="logo">
         <a href="index.html">
           <img src="img/icon/icon-logo.png" width="154" height="64" alt="logo">
         </a>
       </div>
-      <nav class="main-nav">
+      <nav class="site-nav">
         <ul>
           <li>
             <span class="main-nav-active">Каталог</span>
-            <ul class="site-nav">
+            <ul class="sub-nav">
               <li>
                 <a href="#" class="nav-selected-text">
                   Новинки
@@ -53,62 +53,64 @@
           </li>
         </ul>
       </nav>
-      <div class="search">
-        <a href="#">Поиск</a>
-        <div class="search-input">
-          <input type="text" placeholder="Что ищем?">
+      <div class="header-buttons clearfix">
+        <div class="search">
+          <a href="#">Поиск</a>
+          <div class="search-input">
+            <input type="text" placeholder="Что ищем?">
+          </div>
         </div>
-      </div>
-      <div class="user-block">
-        <a href="#">Вход</a>
-        <div class="user-reg">
-          <form action="#" method="post">
-            <input type="email" name="email-reg" id="email-reg" placeholder="Электронная почта" required>
-            <input type="password" name="password-login" id="password-login" placeholder="Пароль" required>
-            <input type="submit" value="Войти">
-            <a href="#">
-              Забыли пароль?
-            </a>
-            <a href="#">
-              Новая регистрация
-            </a>
-          </form>
+        <div class="user-block">
+          <a href="#">Вход</a>
+          <div class="user-reg">
+            <form action="#" method="post">
+              <input type="email" name="email-reg" id="email-reg" placeholder="Электронная почта" required>
+              <input type="password" name="password-login" id="password-login" placeholder="Пароль" required>
+              <input type="submit" value="Войти">
+              <a href="#">
+                Забыли пароль?
+              </a>
+              <a href="#">
+                Новая регистрация
+              </a>
+            </form>
+          </div>
         </div>
-      </div>
-      <div class="basket clearfix">
-        <a href="#">2 товара</a>
-        <div class="basket-content">
-          <table class="basket-purchase">
-            <tr class="basket-row row-1">
-              <td>
-                Пломбир с апельсиновым джемом
-              </td>
-              <td>
-                1,5 кг x 200 <span class="basket-currency">руб.</span>
-              </td>
-              <td>
-                300 руб.
-              </td>
-            </tr>
-            <tr class="basket-row row-2">
-              <td>
-                Клубничный пломбир с присыпкой из белого шоколада
-              </td>
-              <td>
-                1,5 кг x 300 <span class="basket-currency">руб.</span>
-              </td>
-              <td>
-                450 руб.
-              </td>
-            </tr>
-          </table>
-          <!-- tr - Вынести тег в css -->
-          <span class="basket-total-price">
-            Итого: 750 руб.
-          </span>
-          <a href="#" class="basket-issue">
-            Оформить заказ
-          </a>
+        <div class="basket clearfix">
+          <a href="#">2 товара</a>
+          <div class="basket-content">
+            <table class="basket-purchase">
+              <tr class="basket-row row-1">
+                <td>
+                  Пломбир с апельсиновым джемом
+                </td>
+                <td>
+                  1,5 кг x 200 <span class="basket-currency">руб.</span>
+                </td>
+                <td>
+                  300 руб.
+                </td>
+              </tr>
+              <tr class="basket-row row-2">
+                <td>
+                  Клубничный пломбир с присыпкой из белого шоколада
+                </td>
+                <td>
+                  1,5 кг x 300 <span class="basket-currency">руб.</span>
+                </td>
+                <td>
+                  450 руб.
+                </td>
+              </tr>
+            </table>
+            <!-- tr - Вынести тег в css -->
+            <span class="basket-total-price">
+              Итого: 750 руб.
+            </span>
+            <a href="#" class="basket-issue">
+              Оформить заказ
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -402,37 +404,53 @@
       </ul>
     </main>
     <footer class="main-footer clearfix">
-      <div class="social-network">
-        <a href="#" class="social-icon twitter">
-          twitter
-        </a>
-        <a href="#" class="social-icon instagram">
-          instagram
-        </a>
-        <a href="#" class="social-icon facebook">
-          facebook
-        </a>
-        <a href="#" class="social-icon vk">
-          vk
-        </a>        
-      </div>
-      <div class="helpful-info">
-        <!--Картинка на псевдоселекторе-->
-        <a href="#" class="bold">
-          Для поставщиков
-        </a>
-        <a href="#">
-          О производстве
-        </a>
-        <a href="#">
-          Наши документы
-        </a>
-        <a href="#">
-          Экологические стандарты
-        </a>
-      </div>
+      <ul class="social-network">
+        <li>
+          <a href="#" class="social-icon twitter">
+            twitter
+          </a>
+        </li>    
+        <li>
+          <a href="#" class="social-icon instagram">
+            instagram
+          </a>
+        </li>    
+        <li>
+          <a href="#" class="social-icon facebook">
+            facebook
+          </a>
+        </li>    
+        <li>
+          <a href="#" class="social-icon vk">
+            vk
+          </a>
+        </li>     
+      </ul>
+      <ul class="helpful-info">
+          <!--Картинка на псевдоселекторе-->
+        <li>
+          <a href="#" class="bold">
+            Для поставщиков
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            О производстве
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Наши документы
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Экологические стандарты
+          </a>
+        </li>    
+      </ul>
       <div class="made-in">
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="made-in-logo">
           <img src="img/icon/icon-madein.png" alt="html academy">
         </a>
         <span class="made-in-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML academy</a> 2016</span>
