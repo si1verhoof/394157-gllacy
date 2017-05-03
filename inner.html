@@ -52,30 +52,32 @@
         </ul>
       </nav>
       <div class="header-buttons">
-        <div class="search">
-          <a href="#">Поиск</a>
+        <div class="header-btn search">
+          <a href="#" class="sprite-header sprite-icon-search">Поиск</a>
           <div class="search-input">
             <input type="text" placeholder="Что ищем?">
           </div>
         </div>
-        <div class="user-block">
-          <a href="#">Вход</a>
+        <div class="header-btn user-block">
+          <a href="#" class="sprite-header sprite-icon-login">Вход</a>
           <div class="user-reg">
             <form action="#" method="post">
               <input type="email" name="email-reg" id="email-reg" placeholder="Электронная почта" required>
               <input type="password" name="password-login" id="password-login" placeholder="Пароль" required>
-              <input type="submit" value="Войти">
-              <a href="#">
-                Забыли пароль?
-              </a>
-              <a href="#">
-                Новая регистрация
-              </a>
+              <input type="submit" value="Войти" class="btn reg-btn">
+              <div class="reg-links">
+                <a href="#">
+                  Забыли пароль?
+                </a><br>
+                <a href="#">
+                  Новая регистрация
+                </a>
+              </div>
             </form>
           </div>
         </div>
-        <div class="basket">
-          <a href="#">2 товара</a>
+        <div class="header-btn basket">
+          <a href="#" class="sprite-header sprite-icon-basket-nonempty">2 товара</a>
           <div class="basket-content">
             <table class="basket-purchase">
               <tr class="basket-row row-1">
@@ -112,33 +114,33 @@
         </div>
       </div>
     </header>
-    <header class="page-header container">
-      <div class="work-time">
-        <p class="time">С 10 до 20, ежедневно</p>
-        <p class="tel-number">8 812 450-25-25</p>
-      </div>
-      <ul class="breadcrumbs">
-        <li>
-          <a href="index.html">
-            Главная
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Каталог
-          </a>
-        </li>
-        <li>
-          <a>
-            Сливочное
-          </a>
-        </li>
-      </ul>
-      <h1 class="catalog-title">
-        Сливочное мороженое
-      </h1>
-    </header>
     <main class="site-main container">
+      <div class="page-header">
+        <div class="work-time">
+          <p class="time">С 10 до 20, ежедневно</p>
+          <p class="tel-number">8 812 450-25-25</p>
+        </div>
+        <ul class="breadcrumbs">
+          <li>
+            <a href="index.html">
+              Главная
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Каталог
+            </a>
+          </li>
+          <li>
+            <a>
+              Сливочное
+            </a>
+          </li>
+        </ul>
+        <h1 class="catalog-title">
+          Сливочное мороженое
+        </h1>
+      </div>
       <div class="sort-value">
         <form action="#" method="post" oninput="priceoutput.value=pricecount.value">
           <span class="sort-text">
