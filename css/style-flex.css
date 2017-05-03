@@ -83,7 +83,7 @@ body.main-page-body {
 
 .header-buttons {
   display: flex;
-  margin: 23px 0 18px;
+  align-items: center;
   justify-content: space-between;
   min-width: 262px;
   min-height: 32px;
@@ -381,27 +381,27 @@ body.main-page-body {
   width: 226px;
 }
 
-.map-text {
+.map-contacts .map-text {
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 6px;
 }
 
-.map-adress {
+.map-contacts .map-adress {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
   margin-bottom: 22px;
 }
 
-.map-tel {
+.map-contacts .map-tel {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
   margin: 3px 0 6px;
 }
 
-.map-worktime{
+.map-contacts .map-worktime{
   font-size: 14px;
   line-height: 22px;
 }
@@ -485,7 +485,7 @@ body.main-page-body {
 .catalog-title {
   margin: 0px;
   padding: 0px;
-  margin-top  : 7px;
+  margin-top: 7px;
 }
 
 .page-header ul {
@@ -568,6 +568,8 @@ body.main-page-body {
   display: inline-block;
   width: 33px;
   height: 32px;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -729,7 +731,7 @@ body.main-page-body {
   line-height: 24px;
 }
 
-.feedback:hover .feedback-form {
+.feedback:hover + .feedback-form {
   display: block;
 }
 
@@ -853,8 +855,8 @@ body.main-page-body {
   content: "";
   display: block;
   position: absolute;
-  top: 2px;
-  left: 10px;
+  top: 15px;
+  left: 8px;
   width: 21px;
   height: 20px;
   background: url("../img/sprite/spritesheet-header.png") no-repeat -67px -5px;
