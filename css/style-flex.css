@@ -378,7 +378,6 @@ body.main-page-body {
   margin: 0;
   padding: 0;
   display: block;
-  width: 226px;
 }
 
 .map-contacts .map-text {
@@ -547,14 +546,15 @@ body.main-page-body {
 }
 
 .header-btn {
-  padding: 7px 16px 7px 44px;
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.2);
   margin-left: 10px;
   border-radius: 50px;
   min-height: 32px;
   box-sizing: border-box;
+  padding: 7px 16px 7px 44px;
 }
+
 
 .basket a {
   padding-right: 33px;
@@ -585,15 +585,14 @@ body.main-page-body {
   text-decoration: none;
 }
 
-
 /* Ховеры */
 
 .catalog {
   position: relative;
 } 
 
-.catalog-nav {
-  display: none;
+.catalog .catalog-nav {
+  /*display: none;*/
   position: absolute;
   width: 143px;
   background-color: rgb(255, 255, 255);
@@ -603,11 +602,13 @@ body.main-page-body {
   box-sizing: border-box;
   top: 27px;
   left: -7px;
+  padding: 11px 20px;
 }
 
 .catalog:hover .catalog-nav {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 .catalog-nav a {
@@ -720,7 +721,7 @@ body.main-page-body {
   left: 50%;
   margin-left: -221px;
   margin-top: -239px;
-  padding: 0 25px 28px;
+  padding: 18px 25px 28px;
   background-color: rgb(248, 247, 244);
   border-radius: 8px;
   box-sizing: border-box;
@@ -740,6 +741,8 @@ body.main-page-body {
   line-height: 28px;
   font-weight: bold;
   font-family: "Roboto Medium", "Verdana", sans-serif;
+  display: inline-block;
+  margin-bottom: 19px;
 }
 
 .feedback-form  input[type="email"],
