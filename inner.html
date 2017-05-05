@@ -12,15 +12,14 @@
           <img src="img/icon/icon-logo.png" width="154" height="64" alt="logo">
         </a>
         <ul class="site-nav">
-          <li>
-            <span class="main-nav-active">Каталог</span>
-            <ul class="sub-nav">
+          <li class="catalog">
+            <a class="catalog-active-page">Каталог</a>
+            <ul class="catalog-nav">
               <li>
-                <a href="#" class="nav-selected-text">
+                <a href="inner.html" class="catalog-new catalog-checked">
                   Новинки
                 </a>
               </li>
-              <!-- <hr> В макете линия, сделать через css::after, т.к. тег hr не дочерний к списку-->
               <li>
                 <a href="#">
                   Сливочное
@@ -44,22 +43,22 @@
             </ul>
           </li>
           <li>
-            <a href="#">Доставка и оплата</a>
+            <a href="#" class="underline">Доставка и оплата</a>
           </li>
           <li>
-            <a href="#">О Компаниии</a>
+            <a href="#" class="underline">О Компаниии</a>
           </li>
         </ul>
       </nav>
       <div class="header-buttons">
-        <div class="header-btn search">
-          <a href="#" class="sprite-header sprite-icon-search">Поиск</a>
+        <div class="search">
+          <a href="#" class="header-btn sprite-header sprite-icon-search">Поиск</a>
           <div class="search-input">
             <input type="text" placeholder="Что ищем?">
           </div>
         </div>
-        <div class="header-btn user-block">
-          <a href="#" class="sprite-header sprite-icon-login">Вход</a>
+        <div class="user-block">
+          <a href="#" class="header-btn sprite-header sprite-icon-login">Вход</a>
           <div class="user-reg">
             <form action="#" method="post">
               <input type="email" name="email-reg" id="email-reg" placeholder="Электронная почта" required>
@@ -76,8 +75,8 @@
             </form>
           </div>
         </div>
-        <div class="header-btn basket">
-          <a href="#" class="sprite-header sprite-icon-basket-nonempty">2 товара</a>
+        <div class="basket">
+          <a href="#" class="header-btn sprite-header sprite-icon-basket-nonempty">2 товара</a>
           <div class="basket-content">
             <table class="basket-purchase">
               <tr class="basket-row row-1">
@@ -141,8 +140,8 @@
           Сливочное мороженое
         </h1>
       </div>
-      <div class="sort-value">
-        <form action="#" method="post" oninput="priceoutput.value=pricecount.value">
+      <form action="#" method="post" oninput="priceoutput.value=pricecount.value" class="sort-value">
+        <div>
           <span class="sort-text">
             Сортировка
           </span>
@@ -151,7 +150,7 @@
               По популярности
             </option>
             <option value="cheap-priority">
-              Сначала дешевые
+              Сначала недорогие
             </option>
             <option value="expensive-priority">
               Сначала дорогие
@@ -160,78 +159,79 @@
               По жирности
             </option>
           </select>
+        </div>
+        <div>
           <span class="sort-text">
             Цена:
           </span>
-          <div class="output-value">
-            <output name="priceoutput"></output>
-          </div>
-          <!-- Добавить второй бегунок -->
-          <div class="input-value">
-            <input type="range" id="pricecount" name="pricecount" min="0" max="800" step="100">
-          </div>
+          <output name="priceoutput" class="output-value"></output>
+          <input type="range" id="pricecount" name="pricecount" min="0" max="800" step="100" class="input-value">
+        </div>
+        <div>
           <span class="sort-text">
             Жирность
           </span>
           <ul class="radio-selection">
             <li>
-              <input type="radio" name="fat-content" id="fat-0" value="fat-0">
+              <input type="radio" name="fat-content" id="fat-0" value="fat-0" class="radio-unit">
               <label for="fat-0">
                 0%
               </label>
             </li>
             <li>
-              <input type="radio" name="fat-content" id="fat-0-10" value="fat-0-10" checked>
+              <input type="radio" name="fat-content" id="fat-0-10" value="fat-0-10" checked class="radio-unit">
               <label for="fat-0-10">
                 до 10%
               </label>
             </li>
             <li>
-              <input type="radio" name="fat-content" id="fat-0-30" value="fat-0-30">
+              <input type="radio" name="fat-content" id="fat-0-30" value="fat-0-30" class="radio-unit">
               <label for="fat-0-30">
                 до 30%
               </label>
             </li>
             <li>
-              <input type="radio" name="fat-content" id="fat-over-30" value="fat-over-30">
+              <input type="radio" name="fat-content" id="fat-over-30" value="fat-over-30" class="radio-unit">
               <label for="fat-over-30">
                 выше 30%
               </label>
             </li>
           </ul>
+        </div>
+        <div>
           <span class="sort-text">
             Наполнители
           </span>
           <ul class="checkbox-selection">
             <li>
-              <input type="checkbox" name="filler-chocolate" id="chocolate" checked>
+              <input type="checkbox" name="filler-chocolate" id="chocolate" checked class="checkbox-unit">
               <label for="chocolate">Шоколадные</label>
             </li>
             <li>
-              <input type="checkbox" name="filler-sugar" id="sugar" checked>
-              <label for="sugar">Сахарные приспки</label>
+              <input type="checkbox" name="filler-sugar" id="sugar" checked class="checkbox-unit">
+              <label for="sugar">Сахарные присыпки</label>
             </li>
             <li>
-              <input type="checkbox" name="filler-fruits" id="fruits">
+              <input type="checkbox" name="filler-fruits" id="fruits" class="checkbox-unit">
               <label for="fruits">Фрукты</label>
             </li>
             <li>
-              <input type="checkbox" name="filler-syrups" id="syrups">
+              <input type="checkbox" name="filler-syrups" id="syrups" class="checkbox-unit">
               <label for="syrups">Сиропы</label>
             </li>
             <li>
-              <input type="checkbox" name="filler-jams" id="jams">
+              <input type="checkbox" name="filler-jams" id="jams" class="checkbox-unit">
               <label for="jams">Джемы</label>
             </li>
           </ul>
-          <input type="submit" value="Применить">
-        </form>
-      </div>
+        </div>
+        <input type="submit" value="Применить" class="sort-btn">
+      </form>
       <div class="production-cards">
         <div class="icecream-card">
           <img src="img/item-cards/card-citruse.png" alt="creamy with citruse" width="267" height="267">
           <span class="price">
-            310 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            310 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочное с апельсиновым джемом и цитрусовой стружкой
@@ -243,7 +243,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-coffee.png" alt="creamy-coffee with chocolate" width="267" height="267">
           <span class="price">
-            380 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            380 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочно-кофейное с кусочками шоколада
@@ -255,7 +255,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-strawberry.png" alt="creamy-strawberry with white chocolate" width="267" height="267">
           <span class="price">
-            355 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            355 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочно-клубничное с присыпкой из белого шоколада
@@ -267,7 +267,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-cremebrulee.png" alt="creme brulee" width="267" height="267">
           <span class="price">
-            415 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            415 <span class="roubles">/кг</span>
           </span>
           <p>
             Cливочное крем-брюле с карамельной подливкой
@@ -279,7 +279,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-cranberry.png" alt="creamy with cranberry jam" width="267" height="267">
           <span class="price">
-            325 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            325 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочное с брусничным джемом
@@ -291,7 +291,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-blueberry.png" alt="creamy-blueberry with berry" width="267" height="267">
           <span class="price">
-            410 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            410 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочно-черничное с цельными ягодами черники
@@ -303,7 +303,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-limon.png" alt="cremy-limon with caramel" width="267" height="267">
           <span class="price">
-            375 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            375 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочно-лимонное с карамельной присыпкой
@@ -315,7 +315,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-creamychocolate.png" alt="creamy with chocolate" width="267" height="267">
           <span class="price">
-            320 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            320 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочное с карамельной присыпкой
@@ -327,7 +327,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-creamyvanilla.png" alt="creamy-vanilla with chocolate" width="267" height="267">
           <span class="price">
-            440 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            440 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочно-ванильное с кусочками шоколада
@@ -339,7 +339,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-menthol.png" alt="creamy with menthol syrup" width="267" height="267">
           <span class="price">
-            435 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            435 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочное с ментоловым сиропом
@@ -351,7 +351,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-darkchocolate.png" alt="creamy with dark chocolate" width="267" height="267">
           <span class="price">
-            355 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            355 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочное с кусочками тёмного шоколада
@@ -363,7 +363,7 @@
         <div class="icecream-card">
           <img src="img/item-cards/card-mint.png" alt="creamy with mint syrup" width="267" height="267">
           <span class="price">
-            420 <img src="img/item-cards/roubles.svg" width="27" height="32">/кг
+            420 <span class="roubles">/кг</span>
           </span>
           <p>
             Сливочное с мятным сиропом

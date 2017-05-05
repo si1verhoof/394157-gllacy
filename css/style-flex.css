@@ -68,7 +68,6 @@ body.main-page-body {
 }
 
 .site-nav a {
-  /*Разобраться, почему не работает инхерит*/
   font-size: 16px;
   line-height: 22px;
   color: rgb(255, 255, 255);
@@ -219,9 +218,42 @@ body.main-page-body {
 }
 
 .hit {
+  position: relative;
+}
+
+.hit::before {
+  content: "";
   position: absolute; 
   left: 0px;
   top: 0px;
+  width: 61px;
+  height: 61px;
+  
+  background-image: url("../img/item-cards/hit.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 10;
+}
+
+.roubles {
+  display: inline-block;
+  width: 73px;
+  padding-left: 29px;
+  position: relative;
+}
+
+.roubles::before {
+  content: "";
+  position: absolute; 
+  left: 0px;
+  top: 5px;
+  width: 27px;
+  height: 32px;
+  
+  background-image: url("../img/item-cards/roubles.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 10;
 }
 
 .icecream-card p {
@@ -231,6 +263,7 @@ body.main-page-body {
   font-family: "Roboto Medium", "Verdana", sans-serif;
   text-align: center;
   text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .features {
@@ -334,9 +367,15 @@ body.main-page-body {
   color: rgb(90, 90, 90);
 }
 
-.subscription-input{
+.subscription-input input[type="email"] {
+  width: 368px;
+  box-sizing: border-box;
+  margin-right: 12px;
   padding: 13px 23px;
-  border-radius: 8px;
+  border-radius: 5px;
+  
+  box-shadow: none;
+  border: 1px solid rgb(211, 211, 210);
 }
 
 .map {
@@ -345,10 +384,15 @@ body.main-page-body {
   position: relative;
 }
 
-.elevation {
+.map::before {
+  content: "";
   position: absolute;
   top: 139px;
   left: 266px;
+  
+  width: 80px;
+  height: 140px;
+  
   z-index: 10;
   background-image: url("../img/icon/icon-formap.png");
   background-repeat: no-repeat;
@@ -383,26 +427,27 @@ body.main-page-body {
 .map-contacts .map-text {
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 6px;
+  margin-bottom: 0px;
 }
 
 .map-contacts .map-adress {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .map-contacts .map-tel {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
-  margin: 3px 0 6px;
+  margin: 3px 0;
 }
 
 .map-contacts .map-worktime{
   font-size: 14px;
   line-height: 22px;
+  margin-bottom: 20px;
 }
 
 .main-footer {
@@ -422,8 +467,17 @@ body.main-page-body {
 }
 
 .helpful-info li {
-  margin-left: 23px;
+  padding-left: 23px;
   min-width: 119px;
+}
+
+.underline {
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.helpful-info-selected  {
+  font-weight: bold;
+  position: relative;
 }
 
 .helpful-info a {
@@ -431,7 +485,6 @@ body.main-page-body {
   font-family: "Roboto", "Verdana", sans-serif;
   font-size: 13px;
   line-height: 18px;
-  text-decoration: none;
 }
 
 .social-network {
@@ -446,14 +499,21 @@ body.main-page-body {
 }
 
 .made-in {
+  width: 250px;
   font-size: 12px;
   line-height: 18px;
   margin-top: 19px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.made-in-logo {
+  margin-right: 64px;
 }
 
 .made-in a {
   font: inherit;
-  text-decoration: none;
   color: rgb(255, 255, 255);
 }
 
@@ -471,7 +531,30 @@ body.main-page-body {
 
 .breadcrumbs li {
   display: inline-block;
-  margin-right: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  display: inline-block;
+  content: "\00bb";
+  position: absolute;
+  vertical-align: center;
+  
+  width: 7px;
+  height: 7px;
+  
+  top: 4px;
+  right: 5px;
+  
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(255, 255, 255);
+  
+}
+
+.breadcrumbs li:last-child {
+  padding-right: 0;
 }
 
 .breadcrumbs a {
@@ -496,8 +579,6 @@ body.main-page-body {
   margin: 0;
   padding: 0;
   list-style: none;
-  
-  background-color: teal;
 }
 
 .sort-value {
@@ -505,11 +586,13 @@ body.main-page-body {
   min-height: 133px;
   margin-left: 27px;
   margin-bottom: 41px;
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.sort-value  li{
-  display: inline-block;
-}
+
 
 .page-switcher {
   margin: 0;
@@ -529,6 +612,21 @@ body.main-page-body {
   margin-right: 0px;
 }
 
+.active-page{
+  
+}
+
+.catalog .catalog-active-page{
+  text-decoration: none;
+  font-weight: normal;
+  background-color: rgb(208, 112, 88);
+  border-radius: 50px;
+  min-height: 32px;
+  box-sizing: border-box;
+  padding: 7px 16px;
+ }
+
+
 /* Кнопки */
 
 .btn {
@@ -540,6 +638,8 @@ body.main-page-body {
   text-decoration: none;
   padding: 13px 23px;
   background-color: rgb(239, 100, 65);
+  background-image: linear-gradient(90deg, rgb(231, 74, 53), rgb(242, 104, 67));
+  box-shadow: 2px 2px 2px 0px rgba(172, 16, 0, 0.64);
   border-radius: 50px;
   border: none;
   box-shadow: none;
@@ -556,8 +656,14 @@ body.main-page-body {
 }
 
 
-.basket a {
+.basket a.sprite-icon-basket{
   padding-right: 33px;
+}
+
+.basket a.sprite-icon-basket-nonempty {
+  padding-right: 16px;
+  background-color: rgb(247, 246, 243);
+  color: rgb(50, 50, 50);
 }
 
 .user-block a {
@@ -585,6 +691,28 @@ body.main-page-body {
   text-decoration: none;
 }
 
+.subscription-input {
+  position: relative;
+}
+
+.info-head-button{
+  font-size: 18px;
+  line-height: 24px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", "Verdana", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 19px 11px;
+  background-color: rgb(239, 100, 65);
+  border-radius: 50px;
+  border: none;
+  box-shadow: none;
+  
+  position: absolute; 
+  right: 0;
+  bottom: 0;
+}
+
 /* Ховеры */
 
 .catalog {
@@ -592,38 +720,66 @@ body.main-page-body {
 } 
 
 .catalog .catalog-nav {
-  /*display: none;*/
+  display: none;
   position: absolute;
   width: 143px;
   background-color: rgb(255, 255, 255);
   z-index: 10;
   min-height: 171px; 
-  border-radius: 8px;
+  border-radius: 5px;
   box-sizing: border-box;
-  top: 27px;
-  left: -7px;
+  top: 34px;
+  left: -15px;
   padding: 11px 20px;
 }
 
 .catalog:hover .catalog-nav {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+  display: block;
+}
+
+.catalog-nav .catalog-new {
+  font-weight: bold;
+}
+
+.catalog-new::after {
+  display: block;
+  content: "";
+  width: 128px;
+  height: 1px;
+  margin-left: -14px;
+  background-color: rgb(50, 50, 50);
+  margin-top: 14px;
+  margin-bottom: 9px;
 }
 
 .catalog-nav a {
-  font-size: 13px;
-  line-height: 24px;
-  color: rgb(0, 0, 0);
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(50, 50, 50);
   font-family: "Roboto", "Verdana", sans-serif;
-  font-weight: regular;
+  font-weight: normal;
   text-decoration: none;
 }
 
 .catalog-nav li {
+  display: inline-block;
+  vertical-align: center;
   min-width: 103px;
   margin: 0;
   padding: 0;
+  vertical-align: top;
+  margin-bottom: 15px;
+  
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", "Verdana", sans-serif;
+  font-weight: regular;
+}
+
+.catalog-nav li:first-child,
+.catalog-nav li:last-child {
+  margin-bottom: 0;
 }
 
 .search-input {
@@ -636,7 +792,7 @@ body.main-page-body {
   min-height: 84px; 
   border-radius: 8px;
   box-sizing: border-box;
-  top: 44px;
+  top: 41px;
   right: 0;
 }
 
@@ -664,7 +820,7 @@ body.main-page-body {
   min-height: 84px; 
   border-radius: 8px;
   box-sizing: border-box;
-  top: 44px;
+  top: 34px;
   right: 0;
 }
 
@@ -851,14 +1007,14 @@ body.main-page-body {
 }
 
 .search a {
-  font-size: 0;
+  text-indent: -99999px;
 }
 
 .sprite-icon-search::before {
   content: "";
   display: block;
   position: absolute;
-  top: 15px;
+  top: 10px;
   left: 8px;
   width: 21px;
   height: 20px;
@@ -913,6 +1069,18 @@ body.main-page-body {
 
 /* Футер */
 
+.helpful-info-selected::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 13px;
+  background: url("../img/sprite/spritesheet-footer.png") no-repeat -47px -5px;
+  display: inline-block;
+  vertical-align: top;
+  top: 2px;
+  left: -20px;
+}
+
 .social-network  li{
   font-size: 0;
   position: relative;
@@ -929,8 +1097,8 @@ body.main-page-body {
   margin-right: 10px;
   background: url("../img/sprite/spritesheet-footer.png") no-repeat center;
   opacity: 0.8;
-  outline: rgba(255, 255, 255, 0.5) solid 2px;
-  border-radius: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
 .facebook {
@@ -938,13 +1106,96 @@ body.main-page-body {
 }
 
 .instagram {
-  background-position: -47px -5px;
+  background-position: -47px -28px;
 }
 
 .twitter{
-  background-position: -5px -47px;
+  background-position: -89px -5px;
 }
 
 .vk {
-  background-position: -47px -47px;
+  background-position: -5px -47px;
+}
+
+/* Формы в каталоге */
+
+.sort-value input[type="radio"],
+.sort-value input[type="checkbox"] {
+  display: none;
+}
+
+.radio-selection  label,
+.checkbox-selection  label {
+  position: relative;
+  padding-left: 31px;
+}
+
+.radio-selection  label::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  
+  width: 21px; 
+  height: 22px;
+  
+  top: 0;
+  left: 0;
+  
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+input.radio-unit:checked + label::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  
+  width: 21px; 
+  height: 22px;
+  
+  top: 0;
+  left: 0;
+  
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  
+  background-color: rgb(255, 255, 255);
+  box-shadow: 
+    inset 0px 0px 0px 4px rgb(132, 157, 143),
+    inset 0px 0px 0px 4px rgba(255, 255, 255, 0.2);
+}
+
+.checkbox-selection  label::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  
+  width: 20px; 
+  height: 21px;
+  
+  top: 0;
+  left: 0;
+  
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+input.checkbox-unit:checked + label::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  
+  width: 11px;
+  height: 7px;
+  
+  top: 5px;
+  left: 5px;
+  
+  border-left: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(255, 255, 255);
+  transform: rotate(-45deg);
 }
