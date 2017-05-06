@@ -208,10 +208,6 @@ body.main-page-body {
   margin-bottom: 40px;
 }
 
-.icecream-card::before {
-  position: absolute;
-}
-
 .price {
   font-size: 45px;
   line-height: 45px;
@@ -227,16 +223,17 @@ body.main-page-body {
 
 .hit::before {
   content: "";
+  display: inline-block;
+  vertical-align: top;
   position: absolute; 
   left: 0px;
-  top: 0px;
+  top: -250px;
   width: 61px;
   height: 61px;
   
   background-image: url("../img/sprite/spritesheet.png");
   background-repeat: no-repeat;
   background-position: -63px -5px;
-  z-index: 10;
 }
 
 .roubles {
@@ -909,15 +906,20 @@ body.main-page-body {
   display: block;
 }
 
-.icecream-card:hover {
-  display: none;
+.icecream-card:hover::after {
+  content: "";
   position: absolute;
+  display: block;
+  z-index: 5;
+  
   top: -6px;
   left: -13px;
-  width: 292px;
-  height: 405px;
   
-  background-color: rgba(255, 255, 255, 0.3);
+  width: 109.77%;
+  height: 124.61%;
+  
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
 }
 
 .feedback-form {
