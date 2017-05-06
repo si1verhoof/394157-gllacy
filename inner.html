@@ -77,7 +77,7 @@
         </div>
         <div class="basket">
           <a href="#" class="header-btn sprite-header sprite-icon-basket-nonempty">2 товара</a>
-          <div class="basket-content">
+          <div class="basket-content clearfix">
             <table class="basket-purchase">
               <tr class="basket-row row-1">
                 <td>
@@ -85,13 +85,18 @@
                     Удалить
                   </a>
                 </td>
-                <td class="basket-purchace-data-item-name">
+                <td>
                   <a href="#" class="basket-purchace-item-name basket-icon-orange-icecream">
                     Пломбир с апельсиновым джемом
                   </a>
                 </td>
+                <td class="basket-purchace-data-item-name">
+                  <a href="#">
+                    Пломбир с апельсиновым джемом
+                  </a>
+                </td>
                 <td>
-                  1,5 кг x 200 <span class="basket-currency">руб.</span>
+                  1,5 кг x <span class="basket-currency">200 руб.</span>
                 </td>
                 <td>
                   300 руб.
@@ -103,13 +108,18 @@
                     Удалить
                   </a>
                 </td>
-                <td class="basket-purchace-data-item-name">
+                <td>
                   <a href="#" class="basket-purchace-item-name basket-icon-strawberry-icecream">
                     Клубничный пломбир с присыпкой из белого шоколада
                   </a>
                 </td>
+                <td class="basket-purchace-data-item-name">
+                  <a href="#">
+                    Клубничный пломбир с присыпкой из белого шоколада
+                  </a>
+                </td>
                 <td>
-                  1,5 кг x 300 <span class="basket-currency">руб.</span>
+                  1,5 кг x <span class="basket-currency">300 руб.</span>
                 </td>
                 <td>
                   450 руб.
@@ -120,7 +130,7 @@
             <span class="basket-total-price">
               Итого: 750 руб.
             </span>
-            <a href="#" class="basket-issue">
+            <a href="#" class="basket-issue btn">
               Оформить заказ
             </a>
           </div>
@@ -154,36 +164,50 @@
           Сливочное мороженое
         </h1>
       </div>
-      <form action="#" method="post" oninput="priceoutput.value=pricecount.value" class="sort-value">
-        <div>
+      <form action="#" method="post" class="sort-value">
+        <div class="sort-select">
           <span class="sort-text">
-            Сортировка
+            cортировка
           </span>
           <select name="sort">
             <option value="popularity-priority">
-              По популярности
+              по популярности
             </option>
             <option value="cheap-priority">
-              Сначала недорогие
+              сначала недорогие
             </option>
             <option value="expensive-priority">
-              Сначала дорогие
+              сначала дорогие
             </option>
             <option value="fat-value-priority">
-              По жирности
+              по жирности
             </option>
           </select>
         </div>
-        <div>
-          <span class="sort-text">
-            Цена:
-          </span>
-          <output name="priceoutput" class="output-value"></output>
-          <input type="range" id="pricecount" name="pricecount" min="0" max="800" step="100" class="input-value">
+        <div class="sort-range">
+          <div class="sort-range-price sort-text">
+            <span class="sort-range-title">
+              Цена:
+            </span>
+            <label class="sort-min-price">
+              <input type="text" name="min-price" value="100"> руб.</input>
+            </label>
+            <label class="sort-max-price">
+              <span class="sort-range-sumbol">-</span>
+              <input type="text" name="max-price" value="500"> руб.</input>
+            </label>
+          </div>
+          <div class="sort-range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="sort-range-toggle range-toggle-min"></div>
+            <div class="sort-range-toggle range-toggle-max"></div>
+          </div>
         </div>
-        <div>
+        <div class="sort-radio">
           <span class="sort-text">
-            Жирность
+            Жирность:
           </span>
           <ul class="radio-selection">
             <li>
@@ -212,7 +236,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="sort-checkbox">
           <span class="sort-text">
             Наполнители
           </span>
@@ -255,6 +279,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -269,6 +294,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -283,6 +309,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -297,6 +324,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -311,6 +339,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -325,6 +354,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -339,6 +369,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -353,6 +384,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -367,6 +399,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -381,6 +414,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -395,6 +429,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
         <div class="icecream-card">
           <a href="#">
@@ -409,6 +444,7 @@
           <a href="#" class="hidden-button btn">
             Быстрый просмотр
           </a>
+          <div class="hidden-background"></div>
         </div>
       </div>
       <ul class="page-switcher">

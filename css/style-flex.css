@@ -206,6 +206,8 @@ body.main-page-body {
   box-sizing: border-box;
   position: relative;
   margin-bottom: 40px;
+  
+  z-index: 20;
 }
 
 .icecream-card::before {
@@ -580,25 +582,6 @@ body.main-page-body {
   padding: 0;
 }
 
-.sort-value  ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sort-value {
-  width: 860px;
-  min-height: 133px;
-  margin-left: 27px;
-  margin-bottom: 41px;
-  
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-
-
 .page-switcher {
   margin: 0;
   padding: 0;
@@ -698,7 +681,6 @@ body.main-page-body {
   box-shadow: 2px 2px 2px 0px rgba(172, 16, 0, 0.64);
   border-radius: 50px;
   border: none;
-  box-shadow: none;
 }
 
 .header-btn {
@@ -925,6 +907,22 @@ body.main-page-body {
   display: none;
 }
 
+.icecream-card:hover .hidden-button,
+.icecream-card:hover .hidden-background  {
+  display: block;
+}
+
+.hidden-background {
+  display: none;
+  position: absolute;
+  top: -6px;
+  left: -13px;
+  width: 292px;
+  height: 405px;
+  
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .feedback-form {
   width: 478px;
   min-height: 443px;
@@ -1002,18 +1000,12 @@ body.main-page-body {
 
 /*Каталог*/
 
-table.basket-purchase,
-table.basket-purchase tr,
-table.basket-purchase td {
-  border: 1px solid black;
-}
-
 .basket-content {
-  /*display: none;*/
+  display: none;
   position: absolute;
   width: 540px;
-  min-height: 242px;
-  padding: 30px 15px 82px;
+  min-height: 232px;
+  padding: 0 15px 82px;
   background-color: rgb(255, 255, 255);
   z-index: 10;
   min-height: 84px; 
@@ -1028,8 +1020,35 @@ table.basket-purchase td {
   font-family: "Roboto", "Verdana", sans-serif;
 }
 
-.basket-purchase td{
+.basket:hover .basket-content {
+  display: block;
+}
+
+.basket-purchase {
+  width: 510px;
+  border-spacing: 0 20px;
+}
+
+.basket-purchase td {
   vertical-align: top;
+  padding: 10px 0;
+}
+
+.basket-content::after {
+  content: "";
+  position: absolute;
+  margin: 0 15px;
+  
+  top: 135px;
+  left: 0;
+  
+  width: 510px;
+  height: 1px;
+  background-color: rgb(202, 202, 199);
+}
+
+.basket-purchase td:not(.basket-purchace-data-item-name){
+  text-align: center;
 }
 
 .basket-purchase a {
@@ -1075,12 +1094,13 @@ table.basket-purchase td {
 }
 
 .basket-purchace-data-item-name {
-  width: 262px;
+  width: 216px;
 }
 
-.basket-purchace-item-name {
-  padding-left: 46px;
+.basket-content .basket-purchace-item-name {
+  padding-left: 33px;
   position: relative;
+  font-size: 0;
 }
 
 .basket-icon-orange-icecream::before {
@@ -1091,7 +1111,7 @@ table.basket-purchase td {
   width: 33px;
   height: 33px;
   
-  top: -8px;
+  top: -21px;
   left: 0px;
   
   background-image: url("../img/sprite/spritesheet.png");
@@ -1107,12 +1127,32 @@ table.basket-purchase td {
   width: 33px;
   height: 33px;
   
-  top: -8px;
+  top: -21px;
   left: 0px;
   
   background-image: url("../img/sprite/spritesheet.png");
   background-repeat: no-repeat;
   background-position: -73px -155px;
+}
+
+.basket-total-price {
+  display: inline-block;
+  float: right;
+  margin-top: -5px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+} 
+
+.basket-currency {
+  color: rgb(153, 153, 153);
+}
+
+.basket-content a.basket-issue {
+  
+  position: absolute;
+  top: 178px;
+  right: 15px;
 }
 
 .made-in-logo {
@@ -1299,10 +1339,10 @@ table.basket-purchase td {
   display: inline-block;
   box-sizing: border-box;
   
-  width: 21px; 
-  height: 22px;
+  width: 20px; 
+  height: 20px;
   
-  top: 0;
+  top: -1px;
   left: 0;
   
   border: 1px solid rgb(255, 255, 255);
@@ -1315,10 +1355,10 @@ input.radio-unit:checked + label::before {
   display: inline-block;
   box-sizing: border-box;
   
-  width: 21px; 
-  height: 22px;
+  width: 20px; 
+  height: 20px;
   
-  top: 0;
+  top: -1px;
   left: 0;
   
   border: 1px solid rgb(255, 255, 255);
@@ -1339,7 +1379,7 @@ input.radio-unit:checked + label::before {
   width: 20px; 
   height: 21px;
   
-  top: 0;
+  top: -1px;
   left: 0;
   
   border: 1px solid rgb(255, 255, 255);
@@ -1355,10 +1395,231 @@ input.checkbox-unit:checked + label::after {
   width: 11px;
   height: 7px;
   
-  top: 5px;
+  top: 4px;
   left: 5px;
   
   border-left: 2px solid rgb(255, 255, 255);
   border-bottom: 2px solid rgb(255, 255, 255);
   transform: rotate(-45deg);
+}
+
+.sort-value  ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sort-value {
+  width: 876px;
+  height: 133px;
+  margin-left: 27px;
+  margin-bottom: 41px;
+  box-sizing: border-box;
+  text-transform: lowercase;
+  
+  font-size: 14px;
+  line-height: 16px;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 0;
+}
+
+.sort-value > div {
+  margin-right: 16px;
+  box-sizing: border-box;
+}
+
+.radio-selection li{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -13px;
+}
+
+.radio-selection:last-child  {
+  margin-right: 0;
+}
+
+.checkbox-selection li{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -13px;
+}
+
+.checkbox-selection:last-child  {
+  margin-right: 0;
+}
+
+.sort-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 15px 9px;
+}
+
+.sort-select {
+  width; 194px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-transform: lowercase;
+  
+  margin-bottom: 20px;
+}
+
+.sort-select select {
+  color: rgb(255, 255, 255);
+  width: 164px;
+  height: 36px;
+  box-sizing: border-box;
+  
+  background: none;
+  border: none;
+  outline: none;
+  
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+}
+
+.sort-select select:hover {
+  color: rgb(50, 50, 50);
+  background-color: rgb(255, 255, 255);
+}
+
+.sort option {
+  color: rgb(50, 50, 50);
+  background-color: rgb(255, 255, 255);
+}
+
+.sort-range {
+  width: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.sort-value .sort-radio {
+  width: 425px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-right: 0px;
+}
+
+.radio-selection {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+}
+
+.radio-selection li{
+  padding: 10px 15px;
+}
+
+.sort-checkbox {
+  width: 702px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.checkbox-selection {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px
+}
+
+.checkbox-selection li{
+  padding: 9px 15px;
+}
+
+.sort-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 7px 30px;
+  margin-top: 25px;
+  
+  font: inherit;
+  color: inherit;
+  
+  border: 2px solid rgb(255, 255, 255);
+}
+
+/* Ползунки */
+
+.sort-range-price {
+  display: inline-block;
+  font-size: 0;
+}
+
+.sort-range-price label {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.sort-range-title {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.sort-range-price input[type="text"] {
+  width: 25px;
+  margin: 0px;
+  padding: 0px;
+  
+  color: inherit;
+  font: inherit;
+  
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.sort-range-controls {
+  position: relative;
+  
+  margin-top: -5px;
+  padding: 16px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+}
+
+.sort-range-controls .scale{
+  height: 4px;
+  
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sort-range-controls .bar {
+  height: 4px;
+  
+  width: 100px;
+  margin-left: 23px;
+  background-color: rgb(255, 255, 255);
+}
+
+.sort-range-toggle {
+  width: 21px;
+  height: 21px;
+  
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  
+  position: absolute;
+  cursor: pointer;
+  
+  top: 7px;
+}
+
+.range-toggle-min {
+  left: 36px;
+}
+
+.range-toggle-max {
+  left: 125px;
 }
