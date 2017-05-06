@@ -206,8 +206,6 @@ body.main-page-body {
   box-sizing: border-box;
   position: relative;
   margin-bottom: 40px;
-  
-  z-index: 20;
 }
 
 .icecream-card::before {
@@ -907,12 +905,11 @@ body.main-page-body {
   display: none;
 }
 
-.icecream-card:hover .hidden-button,
-.icecream-card:hover .hidden-background  {
+.icecream-card:hover .hidden-button {
   display: block;
 }
 
-.hidden-background {
+.icecream-card:hover {
   display: none;
   position: absolute;
   top: -6px;
