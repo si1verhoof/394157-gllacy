@@ -697,10 +697,13 @@ body > input[type="radio"] {
   justify-content: flex-end;
   margin-right: 27px;
   padding-bottom: 31px;
+  margin-top: 30px;
+  
+  position: relative;
 }
 
 .page-switcher a {
-  margin-right: 20px;
+  margin-right: 4px;
   color: rgb(255, 255, 255);
   font-size: 16px;
   line-height: 18px;
@@ -709,9 +712,26 @@ body > input[type="radio"] {
   text-decoration: none;
 }
 
+.page-switcher::after {
+  content: "";
+  display: block;
+  position: absolute;
+  
+  top: 55px;
+  right: 0;
+  
+  width: 1146px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .page-switcher li:last-child {
   margin-right: 0px;
-  margin-left: -3px;
+  margin-left: 16px;
+}
+
+.page-switcher li:first-child  {
+  margin-right: 13px;
 }
 
 .page-switcher .page-switcher-turn {
@@ -844,9 +864,6 @@ body > input[type="radio"] {
   box-shadow: 0 2px 2px  rgba(172, 16, 0, 0.64);
   border-radius: 50px;
   border: none;
-  
-  transition-duration: 0.5s;
-  transition-property: all;
 }
 
 .btn:hover{
@@ -951,7 +968,6 @@ a.active-link-option:active {
   box-sizing: border-box;
   top: 34px;
   left: -15px;
-  padding: 11px 20px;
   
   transition: delay;
   transition-property: visibility;
@@ -973,9 +989,9 @@ a.active-link-option:active {
   width: 128px;
   height: 1px;
   margin-left: -14px;
-  background-color: rgb(50, 50, 50);
-  margin-top: 14px;
-  margin-bottom: 9px;
+  background-color: rgb(209, 208, 206);
+  margin-top: 13px;
+  margin-bottom: 0px;
 }
 
 .catalog-nav a {
@@ -989,12 +1005,12 @@ a.active-link-option:active {
 
 .catalog-nav li {
   display: inline-block;
-  vertical-align: middle;;
-  min-width: 103px;
+  min-width: 123px;
   margin: 0;
   padding: 0;
   vertical-align: top;
-  margin-bottom: 15px;
+  margin-bottom: 3px;
+  padding: 5px 0 8px 20px;
   
   font-size: 14px;
   line-height: 16px;
@@ -1003,9 +1019,18 @@ a.active-link-option:active {
   font-weight: regular;
 }
 
-.catalog-nav li:first-child,
-.catalog-nav li:last-child {
+.catalog-nav li:nth-child(2) {
+  margin-top: 5px;
+}
+
+.catalog-nav li:first-child {
   margin-bottom: 0;
+  margin-top: 5px;
+  padding-bottom: 0px;
+}
+
+.catalog-nav li:last-child {
+  margin-bottom: 10px;
 }
 
 .search-input {
@@ -1030,9 +1055,24 @@ a.active-link-option:active {
   width: 278px;
   padding: 14px;
   border-radius: 5px;
+  box-sizing: border-box;
   
   box-shadow: none;
   border: 1px solid rgb(211, 211, 210);
+}
+
+
+/* Как сделать без костылей???----------------------------------------------------------------------------------------------------------------------------------------------*/
+.search-input input[type="text"]:hover {
+  box-shadow: inset 0 0 4px rgb(199, 198, 197);
+}
+
+.search-input input[type="text"]:focus {
+  /*font-size: 11px;
+  color: rgb(91, 157, 223);
+  border: 2px solid rgb(91, 157, 223);
+  border-radius: 3px;
+  transform: translateY()*/
 }
 
 .search:hover .search-input {
@@ -1098,6 +1138,12 @@ a.active-link-option:active {
   border: 1px solid rgb(211, 211, 210);
 }
 
+.user-reg input[type="email"]:hover,
+.user-reg input[type="password"]:hover {
+  width: 276px;
+  border: 2px solid rgb(211, 211, 210);
+}
+
 .hidden-button {
   position: absolute;
   bottom: -44px;
@@ -1144,14 +1190,15 @@ a.active-link-option:active {
   color: rgb(50, 50, 50);
   font-size: 16px;
   line-height: 24px;
+  /*
   transition: delay;
   transition-property: visibility;
-  transition-duration: 0.5s;
+  transition-duration: 0.5s;*/
 }
 
 .feedback:hover + .feedback-form {
-  visibility: visible;
-}
+  /*visibility: visible;*/
+} 
 
 .feedback-form p {
   font-size: 24px;
@@ -1175,6 +1222,17 @@ a.active-link-option:active {
   
   box-shadow: none;
   border: 1px solid rgb(211, 211, 210);
+}
+
+.feedback-form  input[type="email"]:hover,
+.feedback-form  input[type="text"]:hover {
+  width: 265px;
+  border: 2px solid rgb(211, 211, 210);
+}
+
+.feedback-form  textarea:hover {
+  width: 398px;
+  border: 2px solid rgb(211, 211, 210);
 }
 
 .feedback-form  textarea {
@@ -1378,6 +1436,14 @@ a.active-link-option:active {
 
 .catalog-nav li:hover {
   background-color: rgb(251, 222, 215);
+}
+
+.catalog-nav li:active {
+  background-color: rgb(246, 181, 165);
+}
+
+.catalog-nav li.catalog-new-active-page {
+  background-color: rgb(208, 112, 88);
 }
 
 /*Иконки*/
