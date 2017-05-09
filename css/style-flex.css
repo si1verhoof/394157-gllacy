@@ -338,7 +338,7 @@ body > input[type="radio"] {
   vertical-align: top;
   box-sizing: border-box;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .icecream-card:hover .icecream-card-link {
@@ -427,7 +427,7 @@ body > input[type="radio"] {
   flex-direction: column;
   color: rgb(50, 50, 50);
   font-family: "Roboto", "Verdana", sans-serif;
-  padding: 20px 19px 9px;
+  padding: 20px 19px 14px;
   margin: 0 27px 40px;
   box-sizing: border-box;
   background: rgb(238, 224, 193) url("../img/pattern-wafer.png") 0 0;
@@ -453,7 +453,7 @@ body > input[type="radio"] {
 .features-text {
   display: block;
   width: 541px;
-  margin-bottom: 11px;
+  margin-bottom: 7px;
   padding-left: 57px;
   box-sizing: border-box;
   margin-top: 15px;
@@ -524,7 +524,8 @@ body > input[type="radio"] {
 }
 
 .subscription-text {
-  margin: 32px;
+  display: block;
+  margin: 32px 27px;
   color: rgb(90, 90, 90);
   width: 510px;
 }
@@ -768,7 +769,7 @@ body > input[type="radio"] {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  margin-right: 27px;
+  margin-right: 32px;
   padding-bottom: 31px;
   margin-top: 30px;
   
@@ -1788,7 +1789,7 @@ body > input[type="radio"] {
 .radio-selection  label,
 .checkbox-selection  label {
   position: relative;
-  padding-left: 31px;
+  padding-left: 33px;
 }
 
 .radio-selection  label::before {
