@@ -199,7 +199,7 @@ body > input[type="radio"] {
 .site-nav li {
   display: inline-block;
   vertical-align: top;
-  margin: 19px 0 18px;
+  margin: 21px 0 18px;
 }
 
 .site-nav a {
@@ -427,7 +427,7 @@ body > input[type="radio"] {
   flex-direction: column;
   color: rgb(50, 50, 50);
   font-family: "Roboto", "Verdana", sans-serif;
-  padding: 23px 19px 14px;
+  padding: 20px 19px 9px;
   margin: 0 27px 40px;
   box-sizing: border-box;
   background: rgb(238, 224, 193) url("../img/pattern-wafer.png") 0 0;
@@ -924,7 +924,7 @@ body > input[type="radio"] {
   border-radius: 50px;
   min-height: 32px;
   box-sizing: border-box;
-  padding: 6px 16px 7px 44px;
+  padding: 6px 14px 7px 44px;
   
   transition-duration: 0.5s;
   transition-property: background-color;
