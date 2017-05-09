@@ -202,7 +202,7 @@ body > input[type="radio"] {
   margin: 21px 0 18px;
 }
 
-.site-nav a {
+.site-nav a.catalog-active-unit {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -221,7 +221,7 @@ body > input[type="radio"] {
   border-radius: 15px;
 }
 
-.site-nav a:hover {
+.site-nav a.catalog-active-unit:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(50, 50, 50);
 }
@@ -708,7 +708,7 @@ body > input[type="radio"] {
 
 .page-header {
   position: relative;
-  padding: 26px 0 27px;
+  padding: 16px 0 27px;
   margin: 0 27px;
 }
 
@@ -748,6 +748,7 @@ body > input[type="radio"] {
   font-size: 14px;
   line-height: 16px;
   color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 .catalog-title {
@@ -1277,7 +1278,7 @@ body > input[type="radio"] {
 
 .hidden-button {
   position: absolute;
-  bottom: -44px;
+  bottom: -54px;
   left: 27px;
   display: none;
   z-index: 30;
@@ -1301,6 +1302,7 @@ body > input[type="radio"] {
   
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
+  box-shadow: 0 20px 30px 3px rgba(0, 0, 0, 0.4);
 }
 
 .feedback-form {
@@ -1584,8 +1586,9 @@ body > input[type="radio"] {
   background-color: rgb(246, 181, 165);
 }
 
-.catalog-nav li.catalog-new-active-page {
+.site-nav a.catalog-active-page {
   background-color: rgb(208, 112, 88);
+  text-decoration: none;
 }
 
 /*Иконки*/
@@ -1831,8 +1834,8 @@ input.radio-unit:checked + label::before {
   
   background-color: rgb(255, 255, 255);
   box-shadow: 
-    inset 0px 0px 0px 4px rgb(132, 157, 143),
-    inset 0px 0px 0px 4px rgba(255, 255, 255, 0.2);
+    inset 0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 0px 0px 0px 4px rgb(132, 157, 143); 
 }
 
 .checkbox-selection  label::before {
@@ -1844,7 +1847,7 @@ input.radio-unit:checked + label::before {
   width: 20px; 
   height: 21px;
   
-  top: -1px;
+  top: 0px;
   left: 0;
   
   border: 1px solid rgb(255, 255, 255);
@@ -1874,7 +1877,7 @@ input.checkbox-unit:checked + label::after {
   width: 11px;
   height: 7px;
   
-  top: 4px;
+  top: 5px;
   left: 5px;
   
   border-left: 2px solid rgb(255, 255, 255);
@@ -1894,7 +1897,6 @@ input.checkbox-unit:checked + label::after {
   margin-left: 27px;
   margin-bottom: 41px;
   box-sizing: border-box;
-  text-transform: lowercase;
   
   font-size: 14px;
   line-height: 16px;
@@ -1937,18 +1939,15 @@ input.checkbox-unit:checked + label::after {
 }
 
 .sort-select {
-  width; 194px;
+  width; 220px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  text-transform: lowercase;
-  
-  margin-bottom: 20px;
 }
 
 .sort-select select {
   color: rgb(255, 255, 255);
-  width: 164px;
+  width: 195px;
   height: 36px;
   box-sizing: border-box;
   
@@ -1956,6 +1955,8 @@ input.checkbox-unit:checked + label::after {
   border: none;
   outline: none;
   
+  font-size: 16px;
+  line-height: 18px;
   padding: 10px 15px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50px;
@@ -2006,7 +2007,12 @@ input.checkbox-unit:checked + label::after {
 
 .checkbox-selection {
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50px
+  border-radius: 50px;
+  
+  font-size: 16px;
+  line-height: 18px;
+  
+  text-transform: lowercase;
 }
 
 .checkbox-selection li{
@@ -2123,7 +2129,7 @@ input.checkbox-unit:checked + label::after {
 }
 
 .range-toggle-max {
-  left: 125px;
+  left: 130px;
 }
 
 .sort-range-symbol {
