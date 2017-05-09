@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Glassy: main page</title>
     <!--Убрать ссылку на временный файл-->
-    <link href="css/style-flex.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
   </head>
@@ -76,7 +76,7 @@
               <a href="#" class="header-btn sprite-header sprite-icon-login">Вход</a>
               <div class="user-reg">
                 <form action="#" method="post">
-                  <input type="email" name="email-reg" id="email-reg" class="input-label-controller email-controller" required>
+                  <input type="text" name="email-reg" id="email-reg" class="input-label-controller email-controller" required>
                   <label for="email-reg">Электронная почта</label>
                   <input type="password" name="password-login" id="password-login" class="input-label-controller" required>
                   <label for="password-login">Пароль?</label>
@@ -210,7 +210,7 @@
             </div>
           </div>
           <div class="features">
-            <span class="features-intro">Магазин Глейси &#8212 это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</span>
+            <span class="features-intro">Магазин Глейси &#8212; это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</span>
             <div class="features-blocks">
               <div class="features-text icon-icecream">
                 Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
@@ -231,9 +231,7 @@
               <p class="info-head">
                 Новое в нашем блоге
               </p>
-              <a href="#" class="info-blog-link active-link-option">
-                10 способов сервировки фруктовых щербетов к столу
-              </a>
+              <a href="#" class="info-blog-link active-link-option">10  способов сервировки фруктовых щербетов к столу</a>
             </div>
             <div class="info-data subscription">
               <div class="substrate">
@@ -241,7 +239,7 @@
                   Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас  происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                 </p>
                 <form action="#" method="post" class="subscription-input">
-                  <input type="email" name="email" id="subscription-input-field" class="input-label-controller" required>
+                  <input type="text" name="email" id="subscription-input-field" class="input-label-controller" required>
                   <label for="subscription-input-field">Электронная почта</label>
                   <input type="submit" value="Отправить" class="btn info-head-button">
                 </form>
@@ -338,11 +336,12 @@
               <img src="img/icon/icon-madein.png" alt="html academy">
             </a>
             <br> <!--Как сделать разрыв ссылки?-->
-            <span class="made-in-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="underline active-link-option">HTML Academy</a> &#169 2017</span>
+            <span class="made-in-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="underline active-link-option">HTML Academy</a> &#169; 2017</span>
           </div>
         </footer>
       </div>
     </div>
     <script src="js/Glassy.js"></script>
+    <script src="flexibility.js"></script>
   </body>
 </html>

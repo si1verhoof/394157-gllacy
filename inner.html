@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Glassy: catalog</title>
-    <link href="css/style-flex.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
   </head>
   <body>
-    <div class="site-wrapper">
+    <div class="site-wrapper catalog-wrapper">
       <div class="content-wrapepr">
         <header class="main-header">
           <nav class="main-nav">
@@ -205,7 +205,7 @@
                   <input type="text" name="min-price" value="100"> руб. 
                 </label>
                 <label class="sort-max-price">
-                  <span class="sort-range-symbol"> &#8211</span>
+                  <span class="sort-range-symbol"> &#8211;</span>
                   <input type="text" name="max-price" value="500"> руб.
                 </label>
               </div>
@@ -231,19 +231,19 @@
                 <li>
                   <input type="radio" name="fat-content" id="fat-0-10" value="fat-0-10" checked class="radio-unit">
                   <label for="fat-0-10">
-                    до <span class="radio-fat-percent">10%</span>
+                    <span class="radio-fat-percent">до 10%</span>
                   </label>
                 </li>
                 <li>
                   <input type="radio" name="fat-content" id="fat-0-30" value="fat-0-30" class="radio-unit">
                   <label for="fat-0-30">
-                    до <span class="radio-fat-percent">30%</span>
+                    <span class="radio-fat-percent">до 30%</span>
                   </label>
                 </li>
                 <li>
                   <input type="radio" name="fat-content" id="fat-over-30" value="fat-over-30" class="radio-unit">
                   <label for="fat-over-30">
-                    выше <span class="radio-fat-percent">30%</span>
+                    <span class="radio-fat-percent">выше 30%</span>
                   </label>
                 </li>
               </ul>
@@ -536,10 +536,12 @@
               <img src="img/icon/icon-madein.png" alt="html academy">
             </a>
             <br> <!--Как сделать разрыв ссылки?-->
-            <span class="made-in-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="underline active-link-option">HTML Academy</a> &#169 2017</span>
+            <span class="made-in-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="underline active-link-option">HTML Academy</a> &#169; 2017</span>
           </div>
         </footer>
       </div>
     </div>
+    <script src="js/Glassy.js"></script>
+    <script src="flexibility.js"></script>
   </body>
 </html>
