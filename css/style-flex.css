@@ -471,7 +471,7 @@ body > input[type="radio"] {
   box-sizing: border-box;
   font-weight: normal;
   color: rgb(50, 50, 50);
-  border-radius: 8px;
+  border-radius: 15px;
   box-sizing: border-box;
 }
 
@@ -487,7 +487,8 @@ body > input[type="radio"] {
 
 .blog {
   background: rgb(255, 255, 255) url("../img/background/recipes.png") no-repeat 0 0;
-  padding: 19px 26px 35px;
+  padding: 24px 20px 35px;
+  font-weight: 500;
 }
 
 .info-head{
@@ -551,6 +552,7 @@ body > input[type="radio"] {
 }
 
 .map {
+  z-index: 1;
   min-height: 430px;
   width: 1200px;
   position: relative;
@@ -566,7 +568,7 @@ body > input[type="radio"] {
   height: 140px;
   
   z-index: 10;
-  background-image: url("../img/icon/spritesheet.png");
+  background-image: url("../img/sprite/spritesheet.png");
   background-repeat: no-repeat;
   background-position: -207px -5px;
 }
@@ -585,10 +587,11 @@ body > input[type="radio"] {
   
 }
 
-.feedback  {
+.map-contacts .feedback  {
   position: absolute;
   bottom: 32px;
   left: 25px;
+  padding: 11px 27px;
 }
 
 .map-contacts p {
@@ -634,7 +637,7 @@ body > input[type="radio"] {
   list-style: none;
   width: 328px;
   min-height: 38px;
-  margin: 30px 24px 26px 0;
+  margin: 25px 24px 26px 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -674,7 +677,7 @@ body > input[type="radio"] {
 
 .social-network li {
   display: inline-block;
-  margin: 30px 24px 26px 0;
+  margin: 30px 0 26px 0;
 }
 
 .made-in {
@@ -684,11 +687,15 @@ body > input[type="radio"] {
   margin-top: 19px;
   display: inline-block;
   text-align: right;
-  margin-right: 10px;
+  font-weight: 300;
 }
 
 .made-in-logo {
-  margin-right: 64px;
+  margin-right: 75px;
+}
+
+.made-in-text {
+  white-space: pre-wrap;
 }
 
 .made-in a {
@@ -1725,7 +1732,7 @@ body > input[type="radio"] {
 .social-network  li{
   font-size: 0;
   position: relative;
-  margin-right: 10px;
+  margin-right: 3px;
 }
 
 .social-icon {
