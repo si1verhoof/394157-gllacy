@@ -1334,6 +1334,38 @@ body > input[type="radio"] {
   /*visibility: visible;*/
 } 
 
+.feedback-close::before {
+  content: "";
+  position: absolute;
+  display: block;
+  
+  top: 25px;
+  right: 5px;
+  
+  width: 24px;
+  height: 24px;
+  
+  border-left: 2px solid rgb(0, 0, 0);
+  transform: rotate(45deg);
+  z-index: 101;
+}
+
+.feedback-close::after {
+  content: "";
+  position: absolute;
+  display: block;
+  
+  top: 25px;
+  right: 22px;
+  
+  width: 24px;
+  height: 24px;
+  
+  border-right: 2px solid rgb(0, 0, 0);
+  transform: rotate(-45deg);
+  z-index: 101;
+}
+
 .feedback-form p {
   font-size: 24px;
   line-height: 28px;
