@@ -198,20 +198,37 @@ body > input[type="radio"] {
 
 .site-nav li {
   display: inline-block;
-  margin: 30px 24px 26px 0;
+  vertical-align: top;
+  margin: 23px 0 18px;
 }
 
 .site-nav a {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 32px;
   color: rgb(255, 255, 255);
-  font-family: "Roboto Medium", "Verdana", sans-serif;
-  font-weight: bold;
+  font-family: "Roboto", "Verdana", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: none;
+  border:none;
+  
+  
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 15px;
 }
 
+.site-nav a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(50, 50, 50);
+}
+  
 .logo {
   margin-top: 9px;
-  margin-right: 24px;
+  margin-right: 10px;
 }
 
 .header-buttons {
@@ -370,14 +387,25 @@ body > input[type="radio"] {
   z-index: 10;
 }
 
-.icecream-card p {
+.icecream-card .active-link-option {
+  position: relative;
+  display: block;
   font-size: 16px;
   line-height: 22px;
   color: rgb(255, 255, 255);
-  font-family: "Roboto Medium", "Verdana", sans-serif;
+  font-family: "Roboto", "Verdana", sans-serif;
   text-align: center;
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.2);
+  z-index: 30;
+  text-decoration: none;
+}
+
+.icecream-card .active-link-option:hover,
+.icecream-card .active-link-option:active {
+  color: rgb(255, 188, 158);
+}
+
+.underline {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .features {
@@ -395,7 +423,7 @@ body > input[type="radio"] {
 .features-intro {
   font-size: 24px;
   line-height: 30px;
-  font-family: "Roboto Medium", "Verdana", sans-serif;
+  font-family: "Roboto", "Verdana", sans-serif;
   flex-grow: 1;
   margin-bottom: 10px;
 }
@@ -429,8 +457,7 @@ body > input[type="radio"] {
   box-sizing: border-box;
 }
 
-.info-blog-link{
-  /*Снова не работает инхерит, почему?*/
+.info-blog-link {
   font-size: 24px;
   line-height: 30px;
   font-family: "Roboto", "Verdana", sans-serif;
@@ -446,7 +473,7 @@ body > input[type="radio"] {
 
 .info-head{
   margin-bottom: 9px;
-  font-family: "Roboto Medium", "Verdana", sans-serif;
+  font-family: "Roboto", "Verdana", sans-serif;
 }
 
 .info p {
@@ -490,6 +517,17 @@ body > input[type="radio"] {
   
   box-shadow: none;
   border: 1px solid rgb(211, 211, 210);
+  
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  height: 44px;
+  
+  font-family: "Roboto", "Verdana", sans-serif;
+  font-size: 16px;
+  line-height: 44px;
+  font-weight: 700;
 }
 
 .map {
@@ -586,10 +624,6 @@ body > input[type="radio"] {
   min-width: 119px;
 }
 
-.underline {
-  text-decoration-color: rgba(255, 255, 255, 0.2);
-}
-
 .helpful-info-selected  {
   font-weight: bold;
   position: relative;
@@ -600,6 +634,16 @@ body > input[type="radio"] {
   font-family: "Roboto", "Verdana", sans-serif;
   font-size: 13px;
   line-height: 18px;
+  text-decoration: none;
+}
+
+.helpful-info a:hover,
+.helpful-info a:active,
+.made-in a:hover,
+.made-in a:active,
+.info-blog-link:hover,
+.info-blog-link:active  {
+  color: rgb(255, 188, 158);
 }
 
 .social-network {
@@ -630,6 +674,7 @@ body > input[type="radio"] {
 .made-in a {
   font: inherit;
   color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 /*Каталог*/
@@ -819,30 +864,7 @@ body > input[type="radio"] {
   height: 25px;
 }
 
-.catalog .catalog-active-page {
-  text-decoration: none;
-  background-color: rgb(208, 112, 88);
-  border-radius: 50px;
-  min-height: 32px;
-  box-sizing: border-box;
-  padding: 5px 16px 7px;
-  margin-right: -16px;
-  margin-left: -16px;
-  
-  font-weight: bold;
- }
 
- .catalog .catalog-active-unit:hover {
-  color: rgb(50, 50, 50);
-  background-color: rgb(255, 255, 255);
-  font-weight: bold;
-  border-radius: 50px;
-  min-height: 32px;
-  box-sizing: border-box;
-  padding: 5px 16px 7px;
-  margin-right: -16px;
-  margin-left: -16px;
- }
  
  
 
@@ -860,7 +882,7 @@ body > input[type="radio"] {
   
   padding: 13px 23px;
   background-color: rgb(239, 100, 65);
-  background-image: linear-gradient(90deg, rgb(231, 74, 53), rgb(242, 104, 67));
+  background-image: linear-gradient(to top, rgb(231, 74, 53), rgb(242, 104, 67));
   box-shadow: 0 2px 2px  rgba(172, 16, 0, 0.64);
   border-radius: 50px;
   border: none;
@@ -947,11 +969,6 @@ body > input[type="radio"] {
 }
 
 /* Ховеры */
-
-a.active-link-option:hover,
-a.active-link-option:active {
-  color: rgb(255, 188, 158);
-}
 
 .catalog {
   position: relative;
@@ -1051,30 +1068,118 @@ a.active-link-option:active {
   transition-duration: 0.5s;
 }
 
-.search-input input[type="text"] {
-  width: 278px;
-  padding: 14px;
+.search-input input[type="text"]:hover {
+  border: 2px solid rgb(211, 211, 210);
+  padding: 13px 14px;
+}
+
+
+.input-label-controller:focus + label ,
+.input-label-controller:focus + label[for="email-reg"],
+.input-label-controller:focus + label[for="password-login"],
+.input-label-controller:focus + label[for="subscription-input-field"],
+.input-label-controller:focus + label[for="feedback-name"],
+.input-label-controller:focus + label[for="feedback-email"],
+.input-label-controller:focus + label[for="recourse"]{
+  font-size: 11px;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+  transform: translateY(-26px);
+}
+
+.search-input input[type="text"],
+.user-reg  input[type="email"],
+.user-reg  input[type="password"] {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 14px;
   border-radius: 5px;
   box-sizing: border-box;
   
-  box-shadow: none;
+  width: 100%;
+  height: 44px;
+  
+  font-family: "Roboto", "Verdana", sans-serif;
+  font-size: 16px;
+  line-height: 44px;
+  font-weight: 700;
+  
   border: 1px solid rgb(211, 211, 210);
+  background-color: rgb(255, 255, 255);
 }
 
-
-/* Как сделать без костылей???----------------------------------------------------------------------------------------------------------------------------------------------*/
-.search-input input[type="text"]:hover {
-  box-shadow: inset 0 0 4px rgb(199, 198, 197);
+.search-input label,
+.user-reg label[for="email-reg"] {
+  position: absolute;
+  z-index: 10;
+  
+  left: 30px;
+  top: 29px;
+  
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(153, 153, 153);
+  font-weight: 400;
+  width: 90%;
+  white-space: nowrap;
 }
 
-.search-input input[type="text"]:focus {
-  /*font-size: 11px;
-  color: rgb(91, 157, 223);
-  border: 2px solid rgb(91, 157, 223);
-  border-radius: 3px;
-  transform: translateY()*/
+.user-reg label[for="password-login"] {
+  position: absolute;
+  z-index: 10;
+  
+  left: 30px;
+  top: 94px;
+  
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(153, 153, 153);
+  font-weight: 400;
+  width: 90%;
+  white-space: nowrap;
 }
 
+.feedback-form label[for="feedback-name"],
+.feedback-form label[for="feedback-email"],
+.feedback-form label[for="recourse"] {
+  position: absolute;
+  z-index: 10;
+  
+  left: 40px;
+  top: 75px;
+  
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(153, 153, 153);
+  font-weight: 400;
+  width: 90%;
+  white-space: nowrap;
+}
+
+.feedback-form label[for="feedback-email"] {
+  top: 139px;
+}
+
+.feedback-form label[for="recourse"] {
+  top: 203px;
+}
+
+.subscription-input label[for="subscription-input-field"] {
+  position: absolute;
+  z-index: 10;
+  
+  left: 14px;
+  top: 10px;
+  
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(153, 153, 153);
+  font-weight: 400;
+  width: 90%;
+  white-space: nowrap;
+}
+    
 .search:hover .search-input {
   visibility: visible;
   box-shadow: 0 20px 30px 3px rgba(0, 0, 0, 0.4);
@@ -1083,7 +1188,7 @@ a.active-link-option:active {
 .user-reg {
   visibility: hidden;
   position: absolute;
-  width: 341px;
+  width: 278px;
   min-height: 214px;
   padding: 20px 15px;
   background-color: rgb(255, 255, 255);
@@ -1129,7 +1234,7 @@ a.active-link-option:active {
 
 .user-reg input[type="email"],
 .user-reg input[type="password"] {
-  width: 278px;
+  width: 100%;
   padding: 14px;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -1140,8 +1245,8 @@ a.active-link-option:active {
 
 .user-reg input[type="email"]:hover,
 .user-reg input[type="password"]:hover {
-  width: 276px;
   border: 2px solid rgb(211, 211, 210);
+  padding: 13px 14px;
 }
 
 .hidden-button {
@@ -1203,8 +1308,8 @@ a.active-link-option:active {
 .feedback-form p {
   font-size: 24px;
   line-height: 28px;
-  font-weight: bold;
-  font-family: "Roboto Medium", "Verdana", sans-serif;
+  font-weight: 500;
+  font-family: "Roboto", "Verdana", sans-serif;
   display: inline-block;
   margin-bottom: 19px;
 }
@@ -1222,17 +1327,28 @@ a.active-link-option:active {
   
   box-shadow: none;
   border: 1px solid rgb(211, 211, 210);
+  
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  height: 44px;
+  
+  font-family: "Roboto", "Verdana", sans-serif;
+  font-size: 16px;
+  line-height: 44px;
+  font-weight: 700;
 }
 
 .feedback-form  input[type="email"]:hover,
 .feedback-form  input[type="text"]:hover {
   width: 265px;
-  border: 2px solid rgb(211, 211, 210);
+  box-shadow: inset 0 0 4px rgb(211, 211, 210);
 }
 
 .feedback-form  textarea:hover {
   width: 398px;
-  border: 2px solid rgb(211, 211, 210);
+  box-shadow: inset 0 0 4px rgb(211, 211, 210);
 }
 
 .feedback-form  textarea {
@@ -1987,3 +2103,4 @@ input.checkbox-unit:checked + label::after {
 .sort-range-symbol {
   white-space: pre-wrap;
 }
+

@@ -21,7 +21,9 @@
             </div>
             <ul class="site-nav">
               <li class="catalog">
-                <a href="#" class="underline catalog-active-unit">Каталог</a>  <!--Ссылка размещена временно-->
+                <a href="#" class="underline catalog-active-unit">
+                  <span class="underline">Каталог</span>
+                </a>
                 <ul class="catalog-nav">
                   <li>
                     <a href="#" class="catalog-new">
@@ -51,10 +53,14 @@
                 </ul>
               </li>
               <li>
-                <a href="#" class="underline">Доставка и оплата</a>
+                <a href="#" class="underline catalog-active-unit">
+                  <span class="underline">Доставка и оплата</span>
+                </a>
               </li>
               <li>
-                <a href="#" class="underline">О Компаниии</a>
+                <a href="#" class="underline catalog-active-unit">
+                  <span class="underline">О Компании</span>
+                </a>
               </li>
             </ul>
           </nav>
@@ -62,15 +68,18 @@
             <div class="search">
               <a href="#" class="header-btn sprite-header sprite-icon-search">Поиск</a>
               <div class="search-input">
-                <input type="text" placeholder="Что ищем?">
+                <input type="text" id="search-input-field" name="search-input-field" class="input-label-controller">
+                <label for="search-input-field">Что ищем?</label>
               </div>
             </div>
             <div class="user-block">
               <a href="#" class="header-btn sprite-header sprite-icon-login">Вход</a>
               <div class="user-reg">
                 <form action="#" method="post">
-                  <input type="email" name="email-reg" id="email-reg" placeholder="Электронная почта" required>
-                  <input type="password" name="password-login" id="password-login" placeholder="Пароль" required>
+                  <input type="email" name="email-reg" id="email-reg" class="input-label-controller email-controller" required>
+                  <label for="email-reg">Электронная почта</label>
+                  <input type="password" name="password-login" id="password-login" class="input-label-controller" required>
+                  <label for="password-login">Пароль?</label>
                   <input type="submit" value="Войти" class="btn reg-btn">
                   <div class="reg-links">
                     <a href="#">
@@ -150,9 +159,9 @@
               <span class="price">
                 310 <span class="roubles">/кг</span>
               </span>
-              <p>
-                Сливочное с апельсиновым джемом и цитрусовой стружкой
-              </p>
+              <a href="#" class="active-link-option">
+                <span class="underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+              </a>
               <a href="#" class="hidden-button btn">
                 Быстрый просмотр
               </a>
@@ -164,9 +173,9 @@
               <span class="price">
                 380 <span class="roubles">/кг</span>
               </span>
-              <p>
-                Сливочно-кофейное с кусочками шоколада
-              </p>
+              <a href="#" class="active-link-option">
+                <span class="underline">Сливочно-кофейное с кусочками шоколада</span>
+              </a>
               <a href="#" class="hidden-button btn">
                 Быстрый просмотр
               </a>
@@ -178,9 +187,9 @@
               <span class="price">
                 355 <span class="roubles">/кг</span>
               </span>
-              <p>
-                Сливочно-клубничное с присыпкой из белого шоколада
-              </p>
+              <a href="#" class="active-link-option">
+                <span class="underline">Сливочно-клубничное с присыпкой из белого шоколада</span>
+              </a>
               <a href="#" class="hidden-button btn">
                 Быстрый просмотр
               </a>
@@ -192,9 +201,9 @@
               <span class="price">
                 415 <span class="roubles">/кг</span>
               </span>
-              <p>
-                Cливочное крем-брюле с карамельной подливкой
-              </p>
+              <a href="#" class="active-link-option">
+                <span class="underline">Cливочное крем-брюле с карамельной подливкой</span>
+              </a>
               <a href="#" class="hidden-button btn">
                 Быстрый просмотр
               </a>
@@ -204,25 +213,21 @@
             <span class="features-intro">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</span>
             <div class="features-blocks">
               <div class="features-text">
-                <!-- осуществить в псевдеэлементе:img src="#" alt="icon: ice cream"-->
                 <p class="icon-icecream">
                   Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
                 </p>
               </div>
               <div class="features-text">
-                <!-- осуществить в псевдеэлементе:img src="#" alt="icon: nature"-->
                 <p class="icon-leaf">
                   Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
                 </p>
               </div>
               <div class="features-text">
-                <!-- осуществить в псевдеэлементе:img src="#" alt="icon: cow"-->
                 <p class="icon-cow">
                   Для приготовления мороженного используются настоящие сливки высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
                 </p>
               </div>
               <div class="features-point features-text">
-                <!-- осуществить в псевдеэлементе:img src="#" alt="icon: temperature"-->
                 <p class="icon-thermometer">
                   Доставка нашего мороженного до заказчиков осуществляется с специальном термопаке, который не дает мороженному растаять в пути и позволяет сохранить превосходный вкус.
                 </p>
@@ -244,7 +249,8 @@
                   Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас  происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                 </p>
                 <form action="#" method="post" class="subscription-input">
-                  <input type="email" name="email" placeholder="Электронная почта" required>
+                  <input type="email" name="email" id="subscription-input-field" class="input-label-controller" required>
+                  <label for="subscription-input-field">Электронная почта</label>
                   <input type="submit" value="Отправить" class="btn info-head-button">
                 </form>
               </div>
@@ -277,9 +283,12 @@
                   Мы обязательно вам ответим!
                 </p>
                 <form action="#" method="post">
-                  <input type="text" name="feedback-name" placeholder="Как вас зовут?" required>
-                  <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?" required>
-                  <textarea rows="5" name="recourse" id="recourse" placeholder="Напишите что-нибудь..."></textarea>
+                  <input type="text" name="feedback-name" id="feedback-name" class="input-label-controller" required>
+                  <label for="feedback-name">Как вас зовут?</label>
+                  <input type="email" name="feedback-email" id="feedback-email" class="input-label-controller" required>
+                  <label for="feedback-email">Ваша почта для ответа?</label>
+                  <textarea rows="5" name="recourse" id="recourse" class="input-label-controller"></textarea>
+                  <label for="recourse">Напишите что-нибудь...</label>
                   <input type="submit" value="Отправить" class="btn feedback-form-btn">
                 </form>
               </div>
@@ -310,7 +319,6 @@
             </li>     
           </ul>
           <ul class="helpful-info">
-              <!--Картинка на псевдоселекторе-->
             <li>
               <a href="#" class="underline helpful-info-selected active-link-option">
                 Для поставщиков
