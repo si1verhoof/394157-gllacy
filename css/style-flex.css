@@ -286,7 +286,7 @@ body > input[type="radio"] {
   width: 560px;
   box-sizing: border-box;
   position: relative;
-  border-radius: 8px;
+  border-radius: 15px;
   padding: 18px;
   box-sizing: border-box;
 }
@@ -300,15 +300,23 @@ body > input[type="radio"] {
 }
 
 .special-offer-head {
+  display: block;
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
-  margin-bottom: 17px;
+  margin-bottom: 13px;
 }
 
 .special-offer p {
+  display: inline-block;
+  vertical-align: top;
   margin: 0;
   padding: 0;
+  
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  font-family: "Roboto", "Verdana", sans-serif;
 }
 
 .special-offer-button {
