@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Glassy: main page</title>
     <!--Убрать ссылку на временный файл-->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="main-page-body">
     <input type="radio" id="slider-btn-control-1" name="toggle" checked>
@@ -68,7 +68,7 @@
             <div class="search">
               <a href="#" class="header-btn sprite-header sprite-icon-search">Поиск</a>
               <div class="search-input">
-                <input type="text" id="search-input-field" name="search-input-field" class="input-label-controller">
+                <input type="text" id="search-input-field" name="search-input-field" class="input-label-controller" required>
                 <label for="search-input-field">Что ищем?</label>
               </div>
             </div>
@@ -246,102 +246,106 @@
               </div>
             </div>
           </div>
-          <div class="map">
-            <img src="img/map.png" width="1200" height="430" alt="map">
-            <div class="map-contacts">
-              <p class="map-text">
-              <!--Как лучше сделать перенос?-->
-                Адрес главного офиса<br> и офлайн магазина:
-              </p>
-              <p class="map-adress">
-                ул. Большая Конюшенная 19/8, Санкт-Петербург
-              </p> 
-              <p class="map-text">
-                Для заказов по телефону: 
-              </p> 
-              <p class="map-tel">
-                8 812 450-25-25
-              </p> 
-              <p class="map-worktime">
-                (с 10 до 20 ежедневно)
-              </p> 
-              <a href="#" class="feedback btn">
-                Форма обратной связи
-              </a>
-              <div class="feedback-form clearfix">
-                <p>
-                  Мы обязательно вам ответим!
-                </p>
-                <form action="#" method="post">
-                  <div class="feedback-close"></div>
-                  <input type="text" name="feedback-name" id="feedback-name" class="input-label-controller" required>
-                  <label for="feedback-name">Как вас зовут?</label>
-                  <input type="email" name="feedback-email" id="feedback-email" class="input-label-controller" required>
-                  <label for="feedback-email">Ваша почта для ответа?</label>
-                  <textarea rows="5" name="recourse" id="recourse" class="input-label-controller"></textarea>
-                  <label for="recourse">Напишите что-нибудь...</label>
-                  <input type="submit" value="Отправить" class="btn feedback-form-btn">
-                </form>
-              </div>
-            </div>
-          </div>
         </main>
-        <footer class="main-footer">
-          <ul class="social-network">
-            <li>
-              <a href="#" class="social-icon twitter">
-                twitter
-              </a>
-            </li>    
-            <li>
-              <a href="#" class="social-icon instagram">
-                instagram
-              </a>
-            </li>    
-            <li>
-              <a href="#" class="social-icon facebook">
-                facebook
-              </a>
-            </li>    
-            <li>
-              <a href="#" class="social-icon vk">
-                vk
-              </a>
-            </li>     
-          </ul>
-          <ul class="helpful-info">
-            <li>
-              <a href="#" class="underline helpful-info-selected active-link-option">
-                Для поставщиков
-              </a>
-            </li>
-            <li>
-              <a href="#" class="underline active-link-option">
-                Наши документы
-              </a>
-            </li>
-            <li>
-              <a href="#" class="underline active-link-option">
-                О производстве
-              </a>
-            </li>
-            <li>
-              <a href="#" class="underline active-link-option">
-                Экологические стандарты
-              </a>
-            </li>    
-          </ul>
-          <div class="made-in">
-            <a href="https://htmlacademy.ru/intensive/htmlcss" class="made-in-logo">
-              <img src="img/icon/icon-madein.png" alt="html academy">
-            </a>
-            <br> <!--Как сделать разрыв ссылки?-->
-            <span class="made-in-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="underline active-link-option">HTML Academy</a> &#169; 2017</span>
-          </div>
-        </footer>
       </div>
     </div>
-    <script src="js/Glassy.js"></script>
+    <div class="map">
+      <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6146657631232!2d30.320266216190056!3d59.938535981876115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca77c663%3A0xe2913435672b14c9!2s21Shop!5e0!3m2!1sru!2sru!4v1494235146447" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="map-container">
+        <div class="map-contacts">
+          <p class="map-text">
+          <!--Как лучше сделать перенос?-->
+            Адрес главного офиса<br> и офлайн магазина:
+          </p>
+          <p class="map-adress">
+            ул. Большая Конюшенная 19/8, Санкт-Петербург
+          </p> 
+          <p class="map-text">
+            Для заказов по телефону: 
+          </p> 
+          <p class="map-tel">
+            8 812 450-25-25
+          </p> 
+          <p class="map-worktime">
+            (с 10 до 20 ежедневно)
+          </p> 
+          <a href="#" class="feedback btn">
+            Форма обратной связи
+          </a>
+          <div class="feedback-form clearfix">
+            <p>
+              Мы обязательно вам ответим!
+            </p>
+            <form action="#" method="post">
+              <div class="feedback-close"></div>
+              <input type="text" name="feedback-name" id="feedback-name" class="input-label-controller" required>
+              <label for="feedback-name">Как вас зовут?</label>
+              <input type="email" name="feedback-email" id="feedback-email" class="input-label-controller" required>
+              <label for="feedback-email">Ваша почта для ответа?</label>
+              <textarea rows="5" name="recourse" id="recourse" class="input-label-controller" required></textarea>
+              <label for="recourse">Напишите что-нибудь...</label>
+              <input type="submit" value="Отправить" class="btn feedback-form-btn">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapepr">
+      <footer class="main-footer">
+        <ul class="social-network">
+          <li>
+            <a href="#" class="social-icon twitter">
+              twitter
+            </a>
+          </li>    
+          <li>
+            <a href="#" class="social-icon instagram">
+              instagram
+            </a>
+          </li>    
+          <li>
+            <a href="#" class="social-icon facebook">
+              facebook
+            </a>
+          </li>    
+          <li>
+            <a href="#" class="social-icon vk">
+              vk
+            </a>
+          </li>     
+        </ul>
+        <ul class="helpful-info">
+          <li>
+            <a href="#" class="underline helpful-info-selected active-link-option">
+              Для поставщиков
+            </a>
+          </li>
+          <li>
+            <a href="#" class="underline active-link-option">
+              Наши документы
+            </a>
+          </li>
+          <li>
+            <a href="#" class="underline active-link-option">
+              О производстве
+            </a>
+          </li>
+          <li>
+            <a href="#" class="underline active-link-option">
+              Экологические стандарты
+            </a>
+          </li>    
+        </ul>
+        <div class="made-in">
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="made-in-logo">
+            <img src="img/icon/icon-madein.png" alt="html academy">
+          </a>
+          <br> <!--Как сделать разрыв ссылки?-->
+          <span class="made-in-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="underline active-link-option">HTML Academy</a> &#169; 2017</span>
+        </div>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
     <script src="flexibility.js"></script>
   </body>
 </html>
