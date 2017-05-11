@@ -321,11 +321,11 @@ body > input[type="radio"] {
 }
 
 .raspberry {
-  background: rgb(60, 7, 22) url("../img/background/raspberry.jpg") no-repeat 0 0;
+  background: rgb(60, 7, 22) url("../img/background/raspberry.jpg") repeat 0 0;
 }
 
 .chocolate {
-  background: rgb(60, 7, 22) url("../img/background/chocolate.jpg") no-repeat 0 0;
+  background: rgb(60, 7, 22) url("../img/background/chocolate.jpg") repeat 0 0;
 }
 
 .special-offer-head {
@@ -373,6 +373,7 @@ body > input[type="radio"] {
   box-sizing: border-box;
   position: relative;
   margin-bottom: 37px;
+  margin-right: 0.1px;
 }
 
 .icecream-card:hover .icecream-card-link {
@@ -553,7 +554,7 @@ body > input[type="radio"] {
 }
 
 .blog {
-  background: rgb(255, 255, 255) url("../img/background/recipes.jpg") no-repeat 0 0;
+  background: rgb(255, 255, 255) url("../img/background/recipes.jpg") repeat 0 0;
   padding: 24px 20px 35px;
   font-weight: 500;
 }
@@ -661,7 +662,7 @@ body > input[type="radio"] {
   bottom: 430px;
   width: 1200px;
   margin: 0 auto;
-  
+  padding-bottom: 60px;
 }
 
 .map-contacts {
