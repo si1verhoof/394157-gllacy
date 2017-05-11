@@ -1930,7 +1930,7 @@ body > input[type="radio"] {
   content: "";
   display: block;
   position: absolute;
-  top: 10px;
+  top: 8px;
   left: 8px;
   width: 21px;
   height: 20px;
