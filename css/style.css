@@ -651,6 +651,9 @@ body > input[type="radio"] {
   background-position: top center;
 }
 
+.map-frame {
+  width: 100%;
+}
 
 .map-container {
   z-index: 1;
