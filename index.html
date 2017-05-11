@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Glassy: main page</title>
-    <!--Убрать ссылку на временный файл-->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -17,7 +16,7 @@
         <header class="main-header">
           <nav class="main-nav">
             <div class="logo">
-               <img src="img/icon/icon-logo.png" width="154" height="64" alt="logo">
+               <img src="img/icon-logo.png" width="154" height="64" alt="logo">
             </div>
             <ul class="site-nav">
               <li class="catalog">
@@ -53,12 +52,12 @@
                 </ul>
               </li>
               <li>
-                <a href="#" class="underline catalog-active-unit">
+                <a href="#" class="catalog-active-unit">
                   <span class="underline">Доставка и оплата</span>
                 </a>
               </li>
               <li>
-                <a href="#" class="underline catalog-active-unit">
+                <a href="#" class="catalog-active-unit">
                   <span class="underline">О Компании</span>
                 </a>
               </li>
@@ -69,7 +68,7 @@
               <a href="#" class="header-btn sprite-header sprite-icon-search">Поиск</a>
               <div class="search-input">
                 <input type="text" id="search-input-field" name="search-input-field" class="input-label-controller" required>
-                <label for="search-input-field">Что ищем?</label>
+                <label for="search-input-field" class="label-transform">Что ищем?</label>
               </div>
             </div>
             <div class="user-block">
@@ -77,9 +76,9 @@
               <div class="user-reg">
                 <form action="#" method="post">
                   <input type="text" name="email-reg" id="email-reg" class="input-label-controller email-controller" required>
-                  <label for="email-reg">Электронная почта</label>
+                  <label for="email-reg" class="label-transform">Электронная почта</label>
                   <input type="password" name="password-login" id="password-login" class="input-label-controller" required>
-                  <label for="password-login">Пароль?</label>
+                  <label for="password-login" class="label-transform">Пароль?</label>
                   <input type="submit" value="Войти" class="btn reg-btn">
                   <div class="reg-links">
                     <a href="#">
@@ -133,7 +132,8 @@
                 Малинка даром!
               </span>
               <p>
-                При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+                При покупке 2 кг любого фруктового мороженого, добавим в ваш 
+                заказ банку малинового варенья бесплатно.
               </p>
               <a href="#" class="special-offer-button btn">
                 Хочу варенье!
@@ -154,7 +154,7 @@
           <div class="production-cards">
             <div class="icecream-card hit">
               <a href="#" class="icecream-card-link">
-                <img src="img/item-cards/card-citruse.png" alt="creamy with citruse" width="267" height="267">
+                <img src="img/item-cards/card-citruse.jpg" alt="creamy with citruse" width="267" height="267">
               </a>
               <span class="price">
                 310 <span class="roubles">/кг</span>
@@ -168,7 +168,7 @@
             </div>
             <div class="icecream-card hit">
               <a href="#" class="icecream-card-link">
-                <img src="img/item-cards/card-coffee.png" alt="creamy-coffee with chocolate" width="267" height="267">
+                <img src="img/item-cards/card-coffee.jpg" alt="creamy-coffee with chocolate" width="267" height="267">
               </a>
               <span class="price">
                 380 <span class="roubles">/кг</span>
@@ -182,7 +182,7 @@
             </div>
             <div class="icecream-card hit">
               <a href="#" class="icecream-card-link">
-                <img src="img/item-cards/card-strawberry.png" alt="creamy-strawberry with white chocolate" width="267" height="267">
+                <img src="img/item-cards/card-strawberry.jpg" alt="creamy-strawberry with white chocolate" width="267" height="267">
               </a>
               <span class="price">
                 355 <span class="roubles">/кг</span>
@@ -196,7 +196,7 @@
             </div>
             <div class="icecream-card hit">
               <a href="#" class="icecream-card-link">
-                <img src="img/item-cards/card-cremebrulee.png" alt="creme brulee" width="267" height="267">
+                <img src="img/item-cards/card-cremebrulee.jpg" alt="creme brulee" width="267" height="267">
               </a>
               <span class="price">
                 415 <span class="roubles">/кг</span>
@@ -210,19 +210,27 @@
             </div>
           </div>
           <div class="features">
-            <span class="features-intro">Магазин Глейси &#8212; это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</span>
+            <span class="features-intro">Магазин Глейси &#8212; это онлайн и 
+              офлайн магазин по продаже мороженого собственного производства на развес</span>
             <div class="features-blocks">
               <div class="features-text icon-icecream">
-                Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                Все наше мороженное изготавливается на собственном производстве, 
+                с использованием современного оборудования и проверенных временем технологий.
               </div>
               <div class="features-text icon-cow">
-                Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                Закупка ингридиентов производится только у проверенных 
+                фермерских хозяйств и компаний, с которыми нас связывает 
+                долговременное сотрудничество.
               </div>
               <div class="features-text icon-leaf">
-                Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
+                Для приготовления мороженного используются настоящие сливки 
+                и молоко высочайшего качества. Все дополнительные ингридиенты 
+                и добавки произведены из натурального, экологически чистого сырья.
               </div>
               <div class="features-point features-text icon-thermometer">
-                Доставка нашего мороженного до заказчиков осуществляется с специальном термопаке, который не дает мороженному растаять в пути и позволяет сохранить превосходный вкус.
+                Доставка нашего мороженного до заказчиков осуществляется с 
+                специальном термопаке, который не дает мороженному растаять 
+                в пути и позволяет сохранить превосходный вкус.
               </div>
             </div>
           </div>
@@ -231,12 +239,14 @@
               <p class="info-head">
                 Новое в нашем блоге
               </p>
-              <a href="#" class="info-blog-link active-link-option">10  способов сервировки фруктовых щербетов к столу</a>
+              <a href="#" class="info-blog-link active-link-option">10&#160 способов сервировки фруктовых щербетов к столу</a>
             </div>
             <div class="info-data subscription">
               <div class="substrate">
                 <p class="subscription-text">
-                  Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас  происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+                  Подпишитесь на нашу сладкую рассылку и будете всегда в 
+                  курсе всего самого вкусного, что у нас  происходит. Обещаем не 
+                  спамить и не слать всякой ненужной ерунды. Честно =)
                 </p>
                 <form action="#" method="post" class="subscription-input">
                   <input type="text" name="email" id="subscription-input-field" class="input-label-controller" required>
@@ -248,104 +258,102 @@
           </div>
         </main>
       </div>
-    </div>
-    <div class="map">
-      <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6146657631232!2d30.320266216190056!3d59.938535981876115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca77c663%3A0xe2913435672b14c9!2s21Shop!5e0!3m2!1sru!2sru!4v1494235146447" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
-      <div class="map-container">
-        <div class="map-contacts">
-          <p class="map-text">
-          <!--Как лучше сделать перенос?-->
-            Адрес главного офиса<br> и офлайн магазина:
-          </p>
-          <p class="map-adress">
-            ул. Большая Конюшенная 19/8, Санкт-Петербург
-          </p> 
-          <p class="map-text">
-            Для заказов по телефону: 
-          </p> 
-          <p class="map-tel">
-            8 812 450-25-25
-          </p> 
-          <p class="map-worktime">
-            (с 10 до 20 ежедневно)
-          </p> 
-          <a href="#" class="feedback btn">
-            Форма обратной связи
-          </a>
-          <div class="feedback-form clearfix">
-            <p>
-              Мы обязательно вам ответим!
+      <div class="map">
+        <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6146657631232!2d30.320266216190056!3d59.938535981876115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca77c663%3A0xe2913435672b14c9!2s21Shop!5e0!3m2!1sru!2sru!4v1494235146447" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="map-container">
+          <div class="map-contacts">
+            <p class="map-text">
+              Адрес главного офиса<br> и офлайн магазина:
             </p>
-            <form action="#" method="post">
-              <div class="feedback-close"></div>
-              <input type="text" name="feedback-name" id="feedback-name" class="input-label-controller" required>
-              <label for="feedback-name">Как вас зовут?</label>
-              <input type="email" name="feedback-email" id="feedback-email" class="input-label-controller" required>
-              <label for="feedback-email">Ваша почта для ответа?</label>
-              <textarea rows="5" name="recourse" id="recourse" class="input-label-controller" required></textarea>
-              <label for="recourse">Напишите что-нибудь...</label>
-              <input type="submit" value="Отправить" class="btn feedback-form-btn">
-            </form>
+            <p class="map-adress">
+              ул. Большая Конюшенная 19/8, Санкт-Петербург
+            </p> 
+            <p class="map-text">
+              Для заказов по телефону: 
+            </p> 
+            <p class="map-tel">
+              8 812 450-25-25
+            </p> 
+            <p class="map-worktime">
+              (с 10 до 20 ежедневно)
+            </p> 
+            <a href="#" class="feedback btn">
+              Форма обратной связи
+            </a>
           </div>
         </div>
       </div>
+      <div class="content-wrapepr">
+        <footer class="main-footer">
+          <ul class="social-network">
+            <li>
+              <a href="#" class="social-icon twitter">
+                twitter
+              </a>
+            </li>    
+            <li>
+              <a href="#" class="social-icon instagram">
+                instagram
+              </a>
+            </li>    
+            <li>
+              <a href="#" class="social-icon facebook">
+                facebook
+              </a>
+            </li>    
+            <li>
+              <a href="#" class="social-icon vk">
+                vk
+              </a>
+            </li>     
+          </ul>
+          <ul class="helpful-info">
+            <li>
+              <a href="#" class="underline helpful-info-selected active-link-option">
+                Для поставщиков
+              </a>
+            </li>
+            <li>
+              <a href="#" class="underline active-link-option">
+                Наши документы
+              </a>
+            </li>
+            <li>
+              <a href="#" class="underline active-link-option">
+                О производстве
+              </a>
+            </li>
+            <li>
+              <a href="#" class="underline active-link-option">
+                Экологические стандарты
+              </a>
+            </li>    
+          </ul>
+          <div class="made-in">
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="made-in-logo">
+              <img src="img/icon-madein.png" alt="html academy" width="108" height="38">
+            </a>
+            <span class="made-in-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="underline active-link-option">HTML Academy</a> &#169; 2017</span>
+          </div>
+        </footer>
+      </div>
     </div>
-    <div class="content-wrapepr">
-      <footer class="main-footer">
-        <ul class="social-network">
-          <li>
-            <a href="#" class="social-icon twitter">
-              twitter
-            </a>
-          </li>    
-          <li>
-            <a href="#" class="social-icon instagram">
-              instagram
-            </a>
-          </li>    
-          <li>
-            <a href="#" class="social-icon facebook">
-              facebook
-            </a>
-          </li>    
-          <li>
-            <a href="#" class="social-icon vk">
-              vk
-            </a>
-          </li>     
-        </ul>
-        <ul class="helpful-info">
-          <li>
-            <a href="#" class="underline helpful-info-selected active-link-option">
-              Для поставщиков
-            </a>
-          </li>
-          <li>
-            <a href="#" class="underline active-link-option">
-              Наши документы
-            </a>
-          </li>
-          <li>
-            <a href="#" class="underline active-link-option">
-              О производстве
-            </a>
-          </li>
-          <li>
-            <a href="#" class="underline active-link-option">
-              Экологические стандарты
-            </a>
-          </li>    
-        </ul>
-        <div class="made-in">
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="made-in-logo">
-            <img src="img/icon/icon-madein.png" alt="html academy">
-          </a>
-          <br> <!--Как сделать разрыв ссылки?-->
-          <span class="made-in-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="underline active-link-option">HTML Academy</a> &#169; 2017</span>
-        </div>
-      </footer>
+    <div class="feedback-form clearfix">
+      <p>
+        Мы обязательно вам ответим!
+      </p>
+      <form action="#" method="post">
+        <div class="feedback-close"></div>
+        <input type="text" name="feedback-name" id="feedback-name" class="input-label-controller" required>
+        <label for="feedback-name">Как вас зовут?</label>
+        <input type="email" name="feedback-email" id="feedback-email" class="input-label-controller" required>
+        <label for="feedback-email">Ваша почта для ответа?</label>
+        <textarea rows="5" name="recourse" id="recourse" class="input-label-controller" required></textarea>
+        <label for="recourse">Напишите что-нибудь...</label>
+        <input type="submit" value="Отправить" class="btn feedback-form-btn">
+      </form>
     </div>
     <script src="js/script.js"></script>
-    <script src="flexibility.js"></script>
+    <script src="js/flexibility.js"></script>
   </body>
 </html>
