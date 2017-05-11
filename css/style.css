@@ -316,7 +316,10 @@ body > input[type="radio"] {
   box-sizing: border-box;
   position: relative;
   border-radius: 15px;
-  padding: 15px;
+  padding-top: 16px;
+  padding-left: 18px;
+  padding-right: 25px;
+  padding-bottom: 80px;
   box-sizing: border-box;
 }
 
@@ -464,6 +467,8 @@ body > input[type="radio"] {
 }
 
 .icecream-card img {
+  width: 267px;
+  height: 267px;
   border-radius: 50%;
   border: none;
   box-shadow: none;
@@ -680,10 +685,8 @@ body > input[type="radio"] {
 }
 
 .map-contacts .feedback {
-  position: absolute;
+  display: inline-block;
   bottom: 32px;
-  left: 25px;
-  padding: 11px 27px;
 }
 
 .map-contacts p {
@@ -1499,13 +1502,13 @@ body > input[type="radio"] {
   animation-duration: 0.6s; 
 }
 
-@-webkit-keyframes shake{
+@-webkit-keyframes shake {
   0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
   10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
   20%, 40%, 60%, 80% { -webkit-transform: translateX(10px); transform: translateX(10px); }
 }
 
-@keyframes shake{
+@keyframes shake {
   0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
   10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
   20%, 40%, 60%, 80% { -webkit-transform: translateX(10px); transform: translateX(10px); }
@@ -1629,6 +1632,7 @@ body > input[type="radio"] {
   
   box-shadow: none;
   border: 1px solid rgb(211, 211, 210);
+  resize: none;
 }
 
 .feedback-form-btn {
@@ -1706,7 +1710,7 @@ body > input[type="radio"] {
   background-color: rgb(202, 202, 199);
 }
 
-.basket-purchase td:not(.basket-purchace-data-item-name){
+.basket-purchase td:not(.basket-purchace-data-item-name) {
   text-align: center;
 }
 
@@ -2214,7 +2218,7 @@ input.checkbox-unit:checked + label::after {
   box-sizing: border-box;
 }
 
-.radio-selection li{
+.radio-selection li {
   display: inline-block;
   vertical-align: top;
   margin-right: -15px;
@@ -2224,7 +2228,7 @@ input.checkbox-unit:checked + label::after {
   margin-right: 5px;
 }
 
-.checkbox-selection li{
+.checkbox-selection li {
   display: inline-block;
   vertical-align: top;
   margin-right: -11px;
@@ -2317,7 +2321,7 @@ input.checkbox-unit:checked + label::after {
   border-radius: 50px;
 }
 
-.radio-selection li{
+.radio-selection li {
   padding: 10px 15px;
 }
 
@@ -2348,7 +2352,7 @@ input.checkbox-unit:checked + label::after {
   text-transform: lowercase;
 }
 
-.checkbox-selection li{
+.checkbox-selection li {
   padding: 9px 15px;
 }
 
@@ -2429,7 +2433,7 @@ input.checkbox-unit:checked + label::after {
   border-radius: 50px;
 }
 
-.sort-range-controls .scale{
+.sort-range-controls .scale {
   height: 4px;
   
   background-color: rgba(255, 255, 255, 0.5);
