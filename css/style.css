@@ -1134,6 +1134,7 @@ body > input[type="radio"] {
   box-sizing: border-box;
   top: 34px;
   left: -15px;
+  box-shadow: 0 20px 30px 3px rgba(0, 0, 0, 0.4);
   
   -webkit-transition: delay;
   
@@ -1146,8 +1147,8 @@ body > input[type="radio"] {
 
 .catalog:hover .catalog-nav {
   visibility: visible;
-  box-shadow: 0 20px 30px 3px rgba(0, 0, 0, 0.4);
 }
+
 
 .catalog-nav .catalog-new {
   font-weight: bold;
@@ -1215,6 +1216,7 @@ body > input[type="radio"] {
   box-sizing: border-box;
   top: 41px;
   right: 0;
+  box-shadow: 0 20px 30px 3px rgba(0, 0, 0, 0.4);
   
   -webkit-transition: delay;
   
@@ -1335,7 +1337,6 @@ body > input[type="radio"] {
     
 .search:hover .search-input {
   visibility: visible;
-  box-shadow: 0 20px 30px 3px rgba(0, 0, 0, 0.4);
 }
 
 .user-reg {
@@ -1351,6 +1352,7 @@ body > input[type="radio"] {
   box-sizing: border-box;
   top: 34px;
   right: 0;
+  box-shadow: 0 20px 30px 3px rgba(0, 0, 0, 0.4);
   
   -webkit-transition: delay;
   
@@ -1403,7 +1405,6 @@ body > input[type="radio"] {
 
 .user-block:hover .user-reg {
   visibility: visible;
-  box-shadow: 0 20px 30px 3px rgba(0, 0, 0, 0.4);
 }
 
 .user-reg input[type="text"],
@@ -1657,6 +1658,7 @@ body > input[type="radio"] {
   box-sizing: border-box;
   top: 34px;
   right: 0;
+  box-shadow: 0 20px 30px 3px rgba(0, 0, 0, 0.4);
   
   color: rgb(50, 50, 50);
   font-size: 13px;
@@ -1674,7 +1676,6 @@ body > input[type="radio"] {
 
 .basket:hover .basket-content {
   visibility: visible;
-  box-shadow: 0 20px 30px 3px rgba(0, 0, 0, 0.4);
 }
 
 .header-btn:hover:not(.sprite-icon-basket) {
@@ -1814,7 +1815,6 @@ body > input[type="radio"] {
 }
 
 .basket-content a.basket-issue {
-  
   position: absolute;
   top: 190px;
   right: 15px;
@@ -1835,6 +1835,10 @@ body > input[type="radio"] {
 .site-nav a.catalog-active-page {
   background-color: rgb(208, 112, 88);
   text-decoration: none;
+}
+
+.catalog-inner-active-page {
+  background-color: rgb(208, 112, 88);
 }
 
 .input-label-controller:focus + label[for="recourse"],
