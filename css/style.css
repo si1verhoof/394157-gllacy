@@ -2278,20 +2278,14 @@ input.checkbox-unit:checked + label::after {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  
+  background-image: url("../img/sprite/spritesheet-select.png");
+  background-repeat: no-repeat;
+  background-position: right 2px; 
 }
 
 .sort-select select::-ms-expand { 
   display: none; 
-}
-
-.sort-select:after {
-    position: absolute;
-    content: '';
-    bottom: 16px;
-    right: 13px;
-    border: 5px solid transparent;
-    border-top-color: rgb(255, 255, 255);
-    border-bottom: 0;
 }
 
 .sort-select:hover:after {
@@ -2305,6 +2299,7 @@ input.checkbox-unit:checked + label::after {
           transition-duration: 0.5s;
   -webkit-transition-property: all;
   transition-property: all;
+  background-position: right -32px; 
 }
 
 .sort-select-form option {
